@@ -181,7 +181,7 @@ require_once('lib/maudience-contactinfo.php');
             $menu_background_color = '';
             $menu_link_color = '';
             $menu_currentnav_color = '#EB593B';
-            $menu_currentnav_bkcolor = '#EB593B';
+            $menu_currentnav_bkcolor = '#e04a21';
             $menu_linkhover_color_gradcolorone = '';
             $menu_linkhover_color_gradcolortwo = '';
 

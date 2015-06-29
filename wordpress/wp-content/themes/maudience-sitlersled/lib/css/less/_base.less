@@ -1,23 +1,23 @@
 /*  BASE 
 
-    This file contains all styles that do not change based on device
-    Use the responsive less files to add positioning styles
+	This file contains all styles that do not change based on device
+	Use the responsive less files to add positioning styles
 
-    Table of contents
+	Table of contents
 
-        General Styles
+		General Styles
 
-        Shell Styles
-            - Header
-            - Menus and Navigation
-            - Sidebar
-            - Footer
+		Shell Styles
+			- Header
+			- Menus and Navigation
+			- Sidebar
+			- Footer
 
-        Plug-in Specific Styles
-            - WooCommerce
-            - Gravity Forms
+		Plug-in Specific Styles
+			- WooCommerce
+			- Gravity Forms
 
-        Page Specific Styles
+		Page Specific Styles
 */
 
 /* ---------------------------------------------- */
@@ -27,35 +27,119 @@
 /* GENERAL STYLES
 *****************************************************************/
 
-    //overwrite twentytwelve theme coloring and positioning with our own
+	//overwrite twentytwelve theme coloring and positioning with our own
 
-        html {
-            background-color: @child-footer-color;//same color as footer as footer doesn't stick to bottom naturally
-        }
-        
-        body {
-            background-color: @child-background-color;
-            
-            .site { box-shadow: none; }
+		html {
+			background-color: @child-footer-color;//same color as footer as footer doesn't stick to bottom naturally
+		}
+		
+		body {
+			background-color: @child-background-color;
+			
+			.site { box-shadow: none; }
 
-            .site-header { background-color: @child-header-color; }
+			.site-header { background-color: @child-header-color; }
 
-            footer[role="contentinfo"] { background-color: @child-footer-color; }
-        }
+			footer[role="contentinfo"] { background-color: @child-footer-color; }
+		}
+
+		.entry-content img,
+		.comment-content img,
+		.widget img, img.header-image,
+		.author-avatar img,
+		img.wp-post-image {
+			box-shadow: none;
+		}
 
 /* SHELL STYLES
 *****************************************************************/
 
-    /*  ******************************** HEADER ********************************  */
-    /*  ******************************** MENUS AND NAVIGATION ********************************  */
-    /*  ******************************** SIDEBAR ********************************  */
-    /*  ******************************** FOOTER ********************************  */
+	/*  ******************************** HEADER ********************************  */
+
+		.site-header {
+			margin: 0;
+			padding: 0;
+
+			.inner-wrap > a {
+				display: inline-block;
+			} 
+		}
+
+	/*  ******************************** MENUS AND NAVIGATION ********************************  */
+
+		.main-navigation {
+			display: inline-block;
+			max-width: 70%;
+			float: right;
+			vertical-align: sub;
+			margin-top: 80px;
+
+			ul.nav-menu,
+			div.nav-menu > ul {
+				border: none;
+			}
+
+			li {
+				margin-right: 1rem;
+
+				&:last-of-type { margin-right: 0; }
+
+				a {
+					color: black;
+					font-weight: bold;
+
+					&:hover { color: @child-color-orange; }
+				}
+
+				&.current_page_item > a { color: @child-color-orange; }
+			}
+		}
+
+	/*  ******************************** CONTENT ********************************  */
+
+		.site-content {
+			margin: 0;
+			padding: 0;
+		}
+
+	/*  ******************************** SIDEBAR ********************************  */
+	/*  ******************************** FOOTER ********************************  */
+
+	body footer[role="contentinfo"] {
+		border-top: 5px solid @child-color-orange;
+	}
+
+	.bottom-footer-wrap {
+		background-color: @child-color-orange;
+		color: white;
+		padding: 20px 0;
+
+		.column {
+			max-width: 50%;
+			display: inline-block;
+		}
+
+		.column-left {
+			float: left; 
+			line-height: 50px;
+		}
+
+		.column-right { float: left; }
+	}
 
 /* PLUGIN STYLES
 *****************************************************************/
 
-    /*  ******************************** WOOCOMMERCE ********************************  */
-    /*  ******************************** GRAVITYFORMS ********************************  */
+	/*  ******************************** WOOCOMMERCE ********************************  */
+	/*  ******************************** GRAVITYFORMS ********************************  */
 
 /* PAGE SPECIFIC STYLES
 *****************************************************************/
+
+	.template-front-page {
+		.widget-area {
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+	}

@@ -33,9 +33,12 @@
             .site,
             footer[role="contentinfo"] { 
                 margin: 0;
-                padding: 0;
                 max-width: none;
             }
+
+            .site { padding: 0; }
+
+            footer[role="contentinfo"] { padding: 25px 0 0; }
 
             .inner-wrap {
                 max-width: 960px;
@@ -50,6 +53,12 @@
     /*  ******************************** MENUS AND NAVIGATION ********************************  */
     /*  ******************************** SIDEBAR ********************************  */
     /*  ******************************** FOOTER ********************************  */
+
+    footer[role="contentinfo"] {
+        .inner-footer-wrap {
+            padding-bottom: 25px;
+        }
+    }
 
 /* PLUGIN STYLES
 *****************************************************************/

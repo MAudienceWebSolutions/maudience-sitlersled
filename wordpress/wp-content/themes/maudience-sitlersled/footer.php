@@ -31,6 +31,12 @@
 				</div><!-- #footer-widget-right -->
 			<?php endif; ?>
 		</div><!-- #inner-footer-wrap -->
+		<div id="bottom-footer-wrap" class="bottom-footer-wrap">
+			<div class="inner-wrap">
+				<div id="footer-bottom-left" class="column column-right">Copyright Sitlers LED</div>
+				<div id="footer-bottom-right" class="column column-right"><img src="/wp-content/themes/maudience-sitlersled/logo-white.png" /></div>
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

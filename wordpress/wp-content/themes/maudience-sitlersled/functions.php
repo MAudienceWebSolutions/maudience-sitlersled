@@ -178,11 +178,12 @@ require_once('lib/maudience-contactinfo.php');
             // $menu_currentnav_color = 'rgba(249,190,25,1)';
             // $menu_linkhover_color_gradcolorone = '#f9f9f9';
             // $menu_linkhover_color_gradcolortwo = '#c9c9c9';
-            $menu_background_color = 'add-color-here';
-            $menu_link_color = 'add-color-here';
-            $menu_currentnav_color = 'add-color-here';
-            $menu_linkhover_color_gradcolorone = 'add-color-here';
-            $menu_linkhover_color_gradcolortwo = 'add-color-here';
+            $menu_background_color = '';
+            $menu_link_color = '';
+            $menu_currentnav_color = '#EB593B';
+            $menu_currentnav_bkcolor = '#EB593B';
+            $menu_linkhover_color_gradcolorone = '';
+            $menu_linkhover_color_gradcolortwo = '';
 
             echo '<style type="text/css">
                /* Styles here! */
@@ -207,26 +208,17 @@ require_once('lib/maudience-contactinfo.php');
                
                /* change admin menu coloring */ 
 
-                /*MENU BACKGROUND COLOR*/
-                #adminmenu, #adminmenu .wp-submenu,
-                #adminmenuback, #adminmenuwrap { background-color: '.$menu_background_color.'; }
+                #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
+                #adminmenu .wp-menu-arrow,
+                #adminmenu .wp-menu-arrow div,
+                #adminmenu li.current a.menu-top,
+                #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
+                .folded #adminmenu li.current.menu-top,
+                .folded #adminmenu li.wp-has-current-submenu { background-color: '.$menu_currentnav_bkcolor.';}
 
-                /*MENU LINK COLOR*/
-                #adminmenu .wp-submenu a { color: '.$menu_link_color.'; }
-
-                /*MENU CURRENT NAV COLOR*/
-                #adminmenu .opensub .wp-submenu li.current a,
-                #adminmenu .wp-submenu li.current, 
-                #adminmenu .wp-submenu li.current a, 
-                #adminmenu .wp-submenu li.current a:focus, 
-                #adminmenu .wp-submenu li.current a:hover, 
-                #adminmenu a.wp-has-current-submenu:focus+.wp-submenu li.current a { '.$menu_currentnav_color.'; }
-
-                /*MENU LINK HOVER COLOR*/
-                #adminmenu li.menu-top:hover,
-                #adminmenu li.opensub>a.menu-top, 
-                #adminmenu li>a.menu-top:focus { background: linear-gradient(to bottom,'.$menu_linkhover_color_gradcolorone.' 37%,'.$menu_linkhover_color_gradcolortwo.' 100%); }
-
+                /* #adminmenu .wp-submenu a:focus,
+                #adminmenu .wp-submenu a:hover, #adminmenu a:hover,
+                #adminmenu li.menu-top>a:focus  { color: '.$menu_currentnav_color.';} */
              </style>';
         }
         add_action('admin_head', 'ma_custom_admin_styles');
@@ -244,8 +236,8 @@ require_once('lib/maudience-contactinfo.php');
                 margin-bottom: 0 !important; 
                 padding-bottom: 0 !important; 
             }
-            .login form { margin-top: 10px !important; border: 1px solid #f9be19; }
-            .login {background:#043789;}
+            .login form { margin-top: 10px !important; border: 1px solid #EB593B; }
+            .login { background: whitesmoke; }
             </style>';
         }
         add_action('login_head', 'ma_custom_login_logo');

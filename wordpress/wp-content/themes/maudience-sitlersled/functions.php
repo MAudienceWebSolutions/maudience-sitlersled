@@ -12,17 +12,11 @@ require_once('lib/maudience-contactinfo.php');
 */
 
     function maudience_scripts() {
-        //enqueue parent styles
+        // enqueue parent styles
         wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 
-        //
+        // enqueue child styles
         wp_enqueue_style( MAUDIENCE_CLIENT_SLUG, get_stylesheet_directory_uri()."/lib/css/style.css" );
-
-        // wp_enqueue_script(
-        //     'custom-js',
-        //     get_stylesheet_directory_uri() . '/custom.js',
-        //     array( 'jquery' )
-        // );
 
         // if (is_front_page()) {
         //     wp_enqueue_script(
@@ -37,9 +31,13 @@ require_once('lib/maudience-contactinfo.php');
         //     );
         // }
 
-        // wp_enqueue_script('jquery-ui-accordion');
+        wp_enqueue_script('jquery-ui-tabs');
+
+
+
+        wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/custom.js', array( 'jquery' ) );
     }
-    add_action( 'wp_enqueue_scripts', 'maudience_scripts'/*, 15*/ );
+    add_action( 'wp_enqueue_scripts', 'maudience_scripts', 99 );
 
 
 /*

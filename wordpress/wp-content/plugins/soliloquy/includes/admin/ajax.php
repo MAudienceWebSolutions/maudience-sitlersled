@@ -764,7 +764,11 @@ function soliloquy_ajax_sort_images() {
     $order       = explode( ',', $_POST['order'] );
     $post_id     = absint( $_POST['post_id'] );
     $slider_data = get_post_meta( $post_id, '_sol_slider_data', true );
-    $new_order   = array();
+    
+    // Copy the slider config, removing the slides
+    $new_order   = $slider_data;
+    unset( $new_order['slider'] );
+    $new_order['slider'] = array();
 
     // Loop through the order and generate a new array based on order received.
     foreach ( $order as $id ) {
@@ -1089,7 +1093,7 @@ function soliloquy_ajax_prepare_slider_data( $slider_data, $id, $type = 'image',
             $attachment = get_post( $id );
             $url        = wp_get_attachment_image_src( $id, 'full' );
             $alt_text   = get_post_meta( $id, '_wp_attachment_image_alt', true );
-            $slider_data['slider'][ $id ] = array(
+            $slide = array(
                 'status'  		=> $publishingDefault,
                 'id'      		=> $id,
                 'attachment_id' => $id,
@@ -1102,7 +1106,7 @@ function soliloquy_ajax_prepare_slider_data( $slider_data, $id, $type = 'image',
             );
             break;
         case 'video' :
-            $slider_data['slider'][ $id ] = array(
+            $slide = array(
                 'status'  => $publishingDefault,
                 'id'      => $id,
                 'src'     => isset( $data['src'] ) ? esc_url( $data['src'] ) : '',
@@ -1148,15 +1152,15 @@ function soliloquy_ajax_prepare_slider_data( $slider_data, $id, $type = 'image',
 		        $stream = Soliloquy_Import::get_instance()->import_remote_image( $data['src'], $data, $id, 0, true );
                 if ( ! is_wp_error( $stream ) ) {
     		        if ( empty( $stream['error'] ) || isset( $stream['error'] ) && ! $stream['error'] ) {
-    	                $slider_data['slider'][$id]['attachment_id'] = $stream['attachment_id'];
-    	                $slider_data['slider'][$id]['src'] = $stream['url'];
+    	                $slide['attachment_id'] = $stream['attachment_id'];
+    	                $slide['src'] = $stream['url'];
     	            }
                 }
 	        }
 	            
             break;
         case 'html' :
-            $slider_data['slider'][$id] = array(
+            $slide = array(
                 'status' => $publishingDefault,
                 'id'     => $id,
                 'title'  => isset( $data['title'] ) ? esc_html( $data['title'] ) : '',
@@ -1166,6 +1170,34 @@ function soliloquy_ajax_prepare_slider_data( $slider_data, $id, $type = 'image',
             break;
     }
 
+    // If slider data is not an array (i.e. we have no slides), just add the slide to the array
+    if ( ! isset( $slider_data['slider'] ) || ! is_array( $slider_data['slider'] ) ) {
+        $slider_data['slider'] = array();
+        $slider_data['slider'][ $id ] = $slide;
+    } else {
+        // Add this image to the start or end of the gallery, depending on the setting
+        $slide_position = get_option( 'soliloquy_slide_position' );
+
+        switch ( $slide_position ) {
+            case 'before':
+                // Add slide to start of slides array
+                // Store copy of slides, reset slider array and rebuild
+                $slides = $slider_data['slider'];
+                $slider_data['slider'] = array();
+                $slider_data['slider'][ $id ] = $slide;
+                foreach ( $slides as $old_slide_id => $old_slide ) {
+                    $slider_data['slider'][ $old_slide_id ] = $old_slide;
+                }
+                break;
+            case 'after':
+            default: 
+                // Add slide, this will default to the end of the array
+                $slider_data['slider'][ $id ] = $slide;  
+                break;
+        } 
+    }
+
+    // Filter and return
     $slider_data = apply_filters( 'soliloquy_ajax_item_data', $slider_data, $id, $type );
 
     return $slider_data;

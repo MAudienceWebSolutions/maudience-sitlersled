@@ -135,6 +135,7 @@ h2 {
 .main-navigation li {
   margin-right: 1.2rem;
   font-size: 0.9rem;
+  font-family: 'Open Sans';
 }
 .main-navigation li:last-of-type {
   margin-right: 0;
@@ -186,7 +187,7 @@ body footer[role="contentinfo"] .footer-widget-left.widget-area > div:first-of-t
 .bottom-footer-wrap .column {
   max-width: 50%;
   display: inline-block;
-  line-height: 4rem;
+  line-height: 5rem;
   font-weight: 100;
   font-family: 'Open Sans';
 }
@@ -286,6 +287,9 @@ body footer[role="contentinfo"] .footer-widget-left.widget-area > div:first-of-t
 }
 /* PAGE SPECIFIC STYLES
 *****************************************************************/
+.template-front-page .site-content article {
+  overflow: visible;
+}
 .template-front-page .widget-area {
   margin: 0;
   padding: 0;

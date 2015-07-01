@@ -56,6 +56,16 @@ require_once('lib/maudience-contactinfo.php');
         //     'after_title' => '</h2>',
         // ) );
 
+        
+        register_sidebar( array(
+            'name' => 'Header Top Right',
+            'id' => 'header-top-right',
+            'before_widget' => '<div id="header-top-right" class="header-top-right">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="rounded">',
+            'after_title' => '</h2>',
+        ) );
+
         register_sidebar( array(
             'name' => 'Home Top Center Full',
             'id' => 'home-top-centerfull',

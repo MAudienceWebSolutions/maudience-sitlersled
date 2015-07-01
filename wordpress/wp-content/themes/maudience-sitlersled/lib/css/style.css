@@ -3,10 +3,32 @@
 /* MIXINS */
 /*
 
-    MIXINS
+	MIXINS
 
 */
 /* USE FLEXBOX FOR ALIGNMENT WHEN POSSIBLE - NO MORE FLOATS*/
+.button {
+  text-decoration: none;
+}
+.button.request-quote {
+  color: #E56F4F;
+  padding: 30px;
+  margin: 10px 0 0 20px;
+  background-image: url('../images/button-border-orange-arrow.png');
+  background-position: 0px 23px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+.flip {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
 /* BASE */
 /*  BASE 
 
@@ -70,13 +92,35 @@ img.wp-post-image {
 .site-header .header-image {
   margin-left: 40px;
 }
+.site-header .header-right.widget-area .textwidget h3 {
+  font-weight: 100;
+  font-size: 1.25rem;
+  color: #e04a21;
+  margin-top: 2px;
+}
+.site-header .header-right.widget-area .textwidget h3:before {
+  content: " ";
+  height: 14px;
+  width: 20px;
+  display: inline-block;
+  background-image: url('../images/phone-icon-orange.png');
+  margin: 0 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
 /*  ******************************** MENUS AND NAVIGATION ********************************  */
 .main-navigation {
   display: inline-block;
   max-width: 70%;
   float: right;
   vertical-align: sub;
-  margin-top: 80px;
+  margin-top: -30px;
 }
 .main-navigation ul.nav-menu,
 .main-navigation div.nav-menu > ul {
@@ -255,6 +299,35 @@ body footer[role="contentinfo"] {
   /* SHELL STYLES
 *****************************************************************/
   /*  ******************************** HEADER ********************************  */
+  .site-header .inner-header-wrap {
+    position: relative;
+  }
+  .site-header .header-right.widget-area {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    text-align: right;
+  }
+  .site-header .header-right.widget-area .textwidget {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -moz-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: space-between;
+    -moz-box-align: space-between;
+    -ms-flex-align: space-between;
+    -webkit-align-items: space-between;
+    align-items: space-between;
+  }
   /*  ******************************** MENUS AND NAVIGATION ********************************  */
   /*  ******************************** SIDEBAR ********************************  */
   /*  ******************************** FOOTER ********************************  */

@@ -44,6 +44,14 @@
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
 			<?php endif; ?>
 
+			<div id="header-right-wrap" class="header-right-wrap header-column">
+				<?php if ( is_active_sidebar( 'header-top-right' ) ) : ?>
+					<div id="header-right" class="header-right widget-area" role="complementary">
+						<?php dynamic_sidebar( 'header-top-right' ); ?>
+					</div><!-- #header-right -->
+				<?php endif; ?>
+			</div>
+
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<button class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></button>
 				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>

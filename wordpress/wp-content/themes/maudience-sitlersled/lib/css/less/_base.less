@@ -65,6 +65,35 @@
 			}
 
 			.header-image { margin-left: 40px; }
+
+			.header-right.widget-area {
+
+                .textwidget {
+
+                    h3 {
+                        font-weight: 100;
+                        font-size: 1.25rem;
+                        color: @child-color-orange;
+                        margin-top: 2px;
+
+                        &:before {
+                        	content: " ";
+                        	height: 14px;
+                        	width: 20px;
+                        	display: inline-block;
+                        	background-image: url('../images/phone-icon-orange.png');
+							margin: 0 10px;
+							background-size: contain;
+							background-repeat: no-repeat;
+                        	.flip; // flip phone image 180
+                        }
+                    }
+
+                    .button {
+                        
+                    }
+                }
+            }
 		}
 
 	/*  ******************************** MENUS AND NAVIGATION ********************************  */
@@ -74,7 +103,7 @@
 			max-width: 70%;
 			float: right;
 			vertical-align: sub;
-			margin-top: 80px;
+			margin-top: -30px;
 
 			ul.nav-menu,
 			div.nav-menu > ul {

@@ -56,6 +56,10 @@
 			p { font-size: 1.25rem; }
 		}
 
+		h2 {
+			font-size: 1.35rem;
+		}
+
 /* SHELL STYLES
 *****************************************************************/
 
@@ -144,6 +148,26 @@
 
 	body footer[role="contentinfo"] {
 		border-top: 5px solid @child-color-orange;
+
+		a { text-decoration: none; }
+
+		a,
+		p {
+			color: black;
+			font-size: 1rem;
+		}
+
+		.footer-widget-left.widget-area {
+			width: 45%;
+
+			> div {
+				width: 40%;
+				display: inline-block;
+				vertical-align: top;
+
+				&:first-of-type { margin-right: 5%; }
+			}
+		}
 	}
 
 	.bottom-footer-wrap {
@@ -154,6 +178,9 @@
 		.column {
 			max-width: 50%;
 			display: inline-block;
+			line-height: 5rem;
+			font-weight: 100;
+			font-family: 'Open Sans';
 		}
 
 		.column-left {

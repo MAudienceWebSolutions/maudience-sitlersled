@@ -82,6 +82,9 @@ img.wp-post-image {
 .entry-content p {
   font-size: 1.25rem;
 }
+h2 {
+  font-size: 1.35rem;
+}
 /* SHELL STYLES
 *****************************************************************/
 /*  ******************************** HEADER ********************************  */
@@ -156,6 +159,25 @@ img.wp-post-image {
 body footer[role="contentinfo"] {
   border-top: 5px solid #e04a21;
 }
+body footer[role="contentinfo"] a {
+  text-decoration: none;
+}
+body footer[role="contentinfo"] a,
+body footer[role="contentinfo"] p {
+  color: black;
+  font-size: 1rem;
+}
+body footer[role="contentinfo"] .footer-widget-left.widget-area {
+  width: 45%;
+}
+body footer[role="contentinfo"] .footer-widget-left.widget-area > div {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+body footer[role="contentinfo"] .footer-widget-left.widget-area > div:first-of-type {
+  margin-right: 5%;
+}
 .bottom-footer-wrap {
   background-color: #e04a21;
   color: white;
@@ -164,6 +186,9 @@ body footer[role="contentinfo"] {
 .bottom-footer-wrap .column {
   max-width: 50%;
   display: inline-block;
+  line-height: 4rem;
+  font-weight: 100;
+  font-family: 'Open Sans';
 }
 .bottom-footer-wrap .column-left {
   float: left;

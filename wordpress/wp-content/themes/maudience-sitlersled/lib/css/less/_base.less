@@ -51,6 +51,11 @@
 			box-shadow: none;
 		}
 
+		.entry-content {
+
+			p { font-size: 1.25rem; }
+		}
+
 /* SHELL STYLES
 *****************************************************************/
 
@@ -167,31 +172,87 @@
 	/*  ******************************** JQUERY ********************************  */
 
 		.ui-tabs-vertical {
-			width: 55em;
+			width: 100%;
 
 			.ui-tabs-panel {
-				padding: 1em;
-				float: right;
-				width: 40em;
+				padding: 45px 0 0;
+				float: left;
+				width: 65%;
+
+				h2 {
+					margin-top: 0;
+					font-size: 1.75rem;
+				}
+
+				a.learn-more {
+					color: @child-color-orange;
+					text-decoration: none;
+					font-weight: bold;
+					.right-pointing-triangle(@child-color-orange);
+				}
 			}
 
 			.ui-tabs-nav {
-				padding: 0.2em 0.1em 0.2em 0.2em;
+				padding: 45px 0 0 0;
 				float: left;
-				width: 12em;
+				width: 32.5%;
 
 				li {
-					clear: left; width: 100%;
-					border-bottom-width: 1px !important;
-					border-right-width: 0 !important;
-					margin: 0 -1px 0.2em 0;
+					// clear: left;
+					// border-bottom-width: 1px;
+					// border-right-width: 0;
+					// padding-left: 1em; 
+					text-indent: -.7em;
+					list-style: none;
+					margin-left: 20px;
+					border-bottom: 1px solid @child-color-orange;
+					border-left: 1px solid @child-color-orange;
+					padding-bottom: 5px;
+					margin-right: 50px;
+					font-weight: bold;
+					position: relative;
 
-					a { display: block; }
+					&:before {
+						content: "•";
+						color: @child-color-orange;
+						font-size: 3.5rem;
+						display: inline-block;
+						width: 35px;
+						line-height: 3rem;
+						position: relative;
+						top: 10px;
+						left: 11px;
+						z-index: 1;
+					}
+
+					&:after {
+						content: " ";
+						color: @child-color-orange;
+						font-size: 0;
+						display: inline-block;
+						position: absolute;
+						top: -0;
+						left: -4px;
+						height: 29px;
+						width: 20px;
+						background-color: white;
+						z-index: 0;
+					}
+
+					a {
+						color: black;
+						text-decoration: none;
+						text-transform: capitalize;
+						font-size: 1.15rem;
+					}
 
 					&.ui-tabs-active {
-						padding-bottom: 0;
-						padding-right: 0.1em;
-						border-right-width: 1px;
+						// padding-bottom: 0;
+						// padding-right: 0.1em;
+						// border-right-width: 1px;
+						border-bottom: none;
+
+						a { color: @child-color-orange; }
 					}
 				}
 			}
@@ -207,4 +268,30 @@
 			padding: 0;
 			border: none;
 		}
+
+		.entry-title {
+			color: black;
+			font-size: 3rem;
+			font-weight: bold;
+
+			span {
+				font-family: Lobster;
+				color: @child-color-orange;
+				font-weight: 100;
+				font-style: italic;
+				font-size: 3.5rem;
+			}
+		}
+
+		.entry-content {
+
+			> p { width: 50%; }
+
+			.ui-tabs-vertical {
+				border-top: 1px solid grey;
+				overflow: auto;
+			}
+		}
+
+		.top-section { margin-bottom: 25px; }
 	}

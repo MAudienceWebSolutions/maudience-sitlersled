@@ -79,6 +79,9 @@ img.header-image,
 img.wp-post-image {
   box-shadow: none;
 }
+.entry-content p {
+  font-size: 1.25rem;
+}
 /* SHELL STYLES
 *****************************************************************/
 /*  ******************************** HEADER ********************************  */
@@ -175,32 +178,86 @@ body footer[role="contentinfo"] {
 /*  ******************************** GRAVITYFORMS ********************************  */
 /*  ******************************** JQUERY ********************************  */
 .ui-tabs-vertical {
-  width: 55em;
+  width: 100%;
 }
 .ui-tabs-vertical .ui-tabs-panel {
-  padding: 1em;
-  float: right;
-  width: 40em;
+  padding: 45px 0 0;
+  float: left;
+  width: 65%;
+}
+.ui-tabs-vertical .ui-tabs-panel h2 {
+  margin-top: 0;
+  font-size: 1.75rem;
+}
+.ui-tabs-vertical .ui-tabs-panel a.learn-more {
+  color: #e04a21;
+  text-decoration: none;
+  font-weight: bold;
+}
+.ui-tabs-vertical .ui-tabs-panel a.learn-more:after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #e04a21;
+  margin-left: 5px;
+  position: relative;
+  top: 1px;
 }
 .ui-tabs-vertical .ui-tabs-nav {
-  padding: 0.2em 0.1em 0.2em 0.2em;
+  padding: 45px 0 0 0;
   float: left;
-  width: 12em;
+  width: 32.5%;
 }
 .ui-tabs-vertical .ui-tabs-nav li {
-  clear: left;
-  width: 100%;
-  border-bottom-width: 1px !important;
-  border-right-width: 0 !important;
-  margin: 0 -1px 0.2em 0;
+  text-indent: -0.7em;
+  list-style: none;
+  margin-left: 20px;
+  border-bottom: 1px solid #e04a21;
+  border-left: 1px solid #e04a21;
+  padding-bottom: 5px;
+  margin-right: 50px;
+  font-weight: bold;
+  position: relative;
+}
+.ui-tabs-vertical .ui-tabs-nav li:before {
+  content: "•";
+  color: #e04a21;
+  font-size: 3.5rem;
+  display: inline-block;
+  width: 35px;
+  line-height: 3rem;
+  position: relative;
+  top: 10px;
+  left: 11px;
+  z-index: 1;
+}
+.ui-tabs-vertical .ui-tabs-nav li:after {
+  content: " ";
+  color: #e04a21;
+  font-size: 0;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -4px;
+  height: 29px;
+  width: 20px;
+  background-color: white;
+  z-index: 0;
 }
 .ui-tabs-vertical .ui-tabs-nav li a {
-  display: block;
+  color: black;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.15rem;
 }
 .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
-  padding-bottom: 0;
-  padding-right: 0.1em;
-  border-right-width: 1px;
+  border-bottom: none;
+}
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active a {
+  color: #e04a21;
 }
 /* PAGE SPECIFIC STYLES
 *****************************************************************/
@@ -208,6 +265,28 @@ body footer[role="contentinfo"] {
   margin: 0;
   padding: 0;
   border: none;
+}
+.template-front-page .entry-title {
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.template-front-page .entry-title span {
+  font-family: Lobster;
+  color: #e04a21;
+  font-weight: 100;
+  font-style: italic;
+  font-size: 3.5rem;
+}
+.template-front-page .entry-content > p {
+  width: 50%;
+}
+.template-front-page .entry-content .ui-tabs-vertical {
+  border-top: 1px solid grey;
+  overflow: auto;
+}
+.template-front-page .top-section {
+  margin-bottom: 25px;
 }
 /* MOBILE - STARTING BOX/POSITION STYLES */
 @media only screen and (min-width: 0px) {

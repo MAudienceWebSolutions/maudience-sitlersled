@@ -61,11 +61,14 @@ img.wp-post-image {
 *****************************************************************/
 /*  ******************************** HEADER ********************************  */
 .site-header {
-  margin: 0;
+  margin: 0 0 40px;
   padding: 0;
 }
 .site-header .inner-wrap > a {
   display: inline-block;
+}
+.site-header .header-image {
+  margin-left: 40px;
 }
 /*  ******************************** MENUS AND NAVIGATION ********************************  */
 .main-navigation {
@@ -80,7 +83,8 @@ img.wp-post-image {
   border: none;
 }
 .main-navigation li {
-  margin-right: 1rem;
+  margin-right: 1.2rem;
+  font-size: 0.9rem;
 }
 .main-navigation li:last-of-type {
   margin-right: 0;

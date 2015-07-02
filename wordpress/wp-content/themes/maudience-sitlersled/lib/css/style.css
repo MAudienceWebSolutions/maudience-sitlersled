@@ -202,12 +202,16 @@ body footer[role="contentinfo"] .footer-widget-left.widget-area > div:first-of-t
 *****************************************************************/
 /*  ******************************** WOOCOMMERCE ********************************  */
 /*  ******************************** GRAVITYFORMS ********************************  */
+/*  ******************************** SOLILOQUY SLIDER ********************************  */
+.widget-area .textwidget .soliloquy-slider li {
+  margin-left: 0;
+}
 /*  ******************************** JQUERY ********************************  */
 .ui-tabs-vertical {
   width: 100%;
 }
 .ui-tabs-vertical .ui-tabs-panel {
-  padding: 45px 0 0;
+  padding: 30px 0 0;
   float: left;
   width: 65%;
 }
@@ -233,7 +237,7 @@ body footer[role="contentinfo"] .footer-widget-left.widget-area > div:first-of-t
   top: 1px;
 }
 .ui-tabs-vertical .ui-tabs-nav {
-  padding: 45px 0 0 0;
+  padding: 20px 0 0 0;
   float: left;
   width: 32.5%;
 }
@@ -316,6 +320,17 @@ body footer[role="contentinfo"] .footer-widget-left.widget-area > div:first-of-t
 }
 .template-front-page .top-section {
   margin-bottom: 25px;
+}
+.template-front-page .bottom-section .section-column {
+  display: inline-block;
+}
+.template-front-page .bottom-section .column-left {
+  float: left;
+  width: 60%;
+}
+.template-front-page .bottom-section .column-right {
+  float: right;
+  width: 35%;
 }
 /* MOBILE - STARTING BOX/POSITION STYLES */
 @media only screen and (min-width: 0px) {

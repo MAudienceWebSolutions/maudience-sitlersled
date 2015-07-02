@@ -63,7 +63,7 @@ get_header(); ?>
 					</section>
 
 					<section id="bottom-section" class="bottom-section home-section">
-						<div id="testimonials-section" class="column-left section-column">
+						<div id="contact-section" class="column-left section-column">
 							<div class="testimonials-information-output">
 								<?php if ( is_active_sidebar( 'home-bottom-left' ) ) : ?>
 									<div id="home-bottom-left" class="home-bottom-left widget-area" role="complementary">
@@ -73,12 +73,14 @@ get_header(); ?>
 							</div>
 						</div>
 
-						<div id="service_area-section" class="column-right section-column">
-							<?php if ( is_active_sidebar( 'home-bottom-right' ) ) : ?>
-								<div id="home-bottom-right" class="home-bottom-right widget-area" role="complementary">
-									<?php dynamic_sidebar( 'home-bottom-right' ); ?>
-								</div><!-- #footer-widget-left -->
-							<?php endif; ?>
+						<div id="testimonials-section" class="column-right section-column">
+							<div id="home-bottom-right" class="home-bottom-right widget-area" role="complementary">
+								<?php if ( is_active_sidebar( 'home-bottom-right' ) ) : ?>
+										<?php dynamic_sidebar( 'home-bottom-right' ); ?>
+								<?php else: ?>
+									<?php maudience_return_custom_posts('testimonials', 1, $title_or_content = 'both') ?>
+								<?php endif; ?>
+							</div><!-- #footer-widget-left -->
 						</div>
 					</section>
 

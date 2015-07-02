@@ -202,6 +202,44 @@ body footer[role="contentinfo"] .footer-widget-left.widget-area > div:first-of-t
 *****************************************************************/
 /*  ******************************** WOOCOMMERCE ********************************  */
 /*  ******************************** GRAVITYFORMS ********************************  */
+.gform_body .gfield_required {
+  display: none;
+}
+.gform_body input[type="text"],
+.gform_body textarea {
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 0;
+}
+.gform_body input[type="text"] {
+  height: 40px;
+}
+.gform_body ::-webkit-input-placeholder {
+  color: grey;
+}
+.gform_body :-moz-placeholder {
+  color: grey;
+}
+.gform_body ::-moz-placeholder {
+  color: grey;
+}
+.gform_body :-ms-input-placeholder {
+  color: grey;
+}
+.gform_body .gform_fields .gfield:first-of-type,
+.gform_body .gform_fields .gfield:nth-of-type(2),
+.gform_body .gform_fields .gfield:nth-of-type(3),
+.gform_body .gform_fields .gfield:nth-of-type(4) {
+  width: 47%;
+  display: inline-block;
+}
+.gform_body .gform_fields .gfield:first-of-type,
+.gform_body .gform_fields .gfield:nth-of-type(3) {
+  margin-right: 5%;
+}
+.gform_body .gform_fields .gfield:nth-of-type(4) {
+  max-width: 95%;
+}
 /*  ******************************** SOLILOQUY SLIDER ********************************  */
 .widget-area .textwidget .soliloquy-slider li {
   margin-left: 0;
@@ -283,9 +321,6 @@ body footer[role="contentinfo"] .footer-widget-left.widget-area > div:first-of-t
   text-transform: capitalize;
   font-size: 1.15rem;
 }
-.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
-  border-bottom: none;
-}
 .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active a {
   color: #e04a21;
 }
@@ -321,6 +356,17 @@ body footer[role="contentinfo"] .footer-widget-left.widget-area > div:first-of-t
 .template-front-page .top-section {
   margin-bottom: 25px;
 }
+.template-front-page .bottom-section {
+  margin-top: 40px;
+}
+.template-front-page .bottom-section h2 {
+  color: white;
+  background-image: url('../images/title-background.png');
+  height: 38px;
+  width: 158px;
+  text-align: center;
+  line-height: 2.5rem;
+}
 .template-front-page .bottom-section .section-column {
   display: inline-block;
 }
@@ -331,6 +377,34 @@ body footer[role="contentinfo"] .footer-widget-left.widget-area > div:first-of-t
 .template-front-page .bottom-section .column-right {
   float: right;
   width: 35%;
+}
+.template-front-page .bottom-section .custom-post-type-list {
+  background-color: whitesmoke;
+  padding: 100px;
+  line-height: 2rem;
+}
+.template-front-page .bottom-section .custom-post-type-list .custom-post-content:before,
+.template-front-page .bottom-section .custom-post-type-list .custom-post-content:after {
+  content: '"';
+  font-size: 4rem;
+  line-height: 1rem;
+  font-family: cursive;
+}
+.template-front-page .bottom-section .custom-post-type-list .custom-post-content:before {
+  float: left;
+  margin-left: -20px;
+  margin-top: -5px;
+}
+.template-front-page .bottom-section .custom-post-type-list .custom-post-content:after {
+  float: right;
+  margin-top: 5px;
+  margin-right: 10px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
 }
 /* MOBILE - STARTING BOX/POSITION STYLES */
 @media only screen and (min-width: 0px) {

@@ -197,6 +197,47 @@
 
 	/*  ******************************** WOOCOMMERCE ********************************  */
 	/*  ******************************** GRAVITYFORMS ********************************  */
+
+		.gform_body {
+			input {  }
+
+			.gfield_required { display: none; }
+
+			input[type="text"], textarea {
+				background-color : whitesmoke;
+				color: black;
+				border-radius: 0;
+			}
+
+			input[type="text"] {
+				height: 40px;
+			}
+
+			::-webkit-input-placeholder { color: grey; }
+			:-moz-placeholder { color: grey; }
+			::-moz-placeholder { color: grey; }
+			:-ms-input-placeholder { color: grey; }
+
+			.gform_fields .gfield {
+
+				&:first-of-type,
+				&:nth-of-type(2),
+				&:nth-of-type(3),
+				&:nth-of-type(4) {
+					width: 47%;
+					display: inline-block;
+				}
+
+				&:first-of-type,
+				&:nth-of-type(3) {
+					margin-right: 5%;
+				}
+
+				&:nth-of-type(4) { max-width: 95%; }
+			}
+		}
+
+
 	/*  ******************************** SOLILOQUY SLIDER ********************************  */
 
 		.widget-area .textwidget .soliloquy-slider li {
@@ -284,7 +325,7 @@
 						// padding-bottom: 0;
 						// padding-right: 0.1em;
 						// border-right-width: 1px;
-						border-bottom: none;
+						// border-bottom: none;
 
 						a { color: @child-color-orange; }
 					}
@@ -335,6 +376,17 @@
 		.top-section { margin-bottom: 25px; }
 
 		.bottom-section {
+			margin-top: 40px;
+
+			h2 {
+				color: white;
+				background-image: url('../images/title-background.png');
+				height: 38px;
+				width: 158px;
+				text-align: center;
+				line-height: 2.5rem;
+			}
+
 			.section-column { display: inline-block; }
 
 			.column-left {
@@ -345,6 +397,35 @@
 			.column-right {
 				float: right;
 				width: 35%;
+			}
+
+			.custom-post-type-list {
+				background-color: whitesmoke;
+				padding: 100px;
+				line-height: 2rem;
+
+				.custom-post-content {
+                    &:before,
+                    &:after {
+                        content: '"';
+                        font-size: 4rem;
+                        line-height: 1rem;
+                        font-family: cursive;
+                    }
+
+                    &:before {
+                        float: left;
+                        margin-left: -20px;
+                        margin-top: -5px;
+                    }
+
+                    &:after {
+                        float: right;
+                        margin-top: 5px;
+                        margin-right: 10px;
+                        .flip;
+                    }
+                }
 			}
 		}
 	}

@@ -78,6 +78,7 @@ get_header(); ?>
 								<?php if ( is_active_sidebar( 'home-bottom-right' ) ) : ?>
 										<?php dynamic_sidebar( 'home-bottom-right' ); ?>
 								<?php else: ?>
+									<h2>Testimonials</h2>
 									<?php maudience_return_custom_posts('testimonials', 1, $title_or_content = 'both') ?>
 								<?php endif; ?>
 							</div><!-- #footer-widget-left -->

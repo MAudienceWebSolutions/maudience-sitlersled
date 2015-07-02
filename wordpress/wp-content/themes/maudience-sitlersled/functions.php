@@ -355,7 +355,7 @@ require_once('lib/maudience-contactinfo.php');
         if( $my_query->have_posts() ) :
           while ($my_query->have_posts()) : $my_query->the_post(); ?>
             <li class="custom-post-type-list-item <?php echo get_post_type() ?>">
-                <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+                <!-- <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"> -->
                     <?php if ( has_post_thumbnail() ) : ?>
                         <div class="entry-page-image">
                             <?php the_post_thumbnail(); ?>
@@ -376,7 +376,7 @@ require_once('lib/maudience-contactinfo.php');
                                 <?php the_content(); ?>
                             </div><!-- .custom-post-title -->
                             <div class="custom-post-title">
-                                <?php the_title(); ?>
+                                <h3> - <?php the_title(); ?></h3>
                             </div><!-- .custom-post-title -->
                         <?php endif; ?>
 
@@ -398,7 +398,7 @@ require_once('lib/maudience-contactinfo.php');
                             </div><!-- .custom-post-upselltext -->
                         <?php endif; ?>
                     </div>
-                </a>
+                <!-- </a> -->
                 <!-- <div class="reserve-now-wrap"><a class="els-button" href='/reservations'>Reserve Now ></a></div> --><!-- .custom-post-upselltext -->              
                <!--  <div class="cpt-button-wrap">
                     <a class="ctl-button ctl-viewdetails-button" href="<?php the_permalink() ?>" />View Details <span>>></span></a>

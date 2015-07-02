@@ -357,7 +357,7 @@ body footer[role="contentinfo"] .footer-widget-left.widget-area > div:first-of-t
   margin-bottom: 25px;
 }
 .template-front-page .bottom-section {
-  margin-top: 40px;
+  margin-top: 100px;
 }
 .template-front-page .bottom-section h2 {
   color: white;
@@ -380,7 +380,7 @@ body footer[role="contentinfo"] .footer-widget-left.widget-area > div:first-of-t
 }
 .template-front-page .bottom-section .custom-post-type-list {
   background-color: whitesmoke;
-  padding: 100px;
+  padding: 40px;
   line-height: 2rem;
 }
 .template-front-page .bottom-section .custom-post-type-list .custom-post-content:before,

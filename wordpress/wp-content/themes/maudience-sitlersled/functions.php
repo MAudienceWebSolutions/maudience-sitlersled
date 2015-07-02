@@ -372,11 +372,11 @@ require_once('lib/maudience-contactinfo.php');
                                 <?php the_content(); ?>
                             </div><!-- .custom-post-title -->
                         <?php elseif ( $title_or_content === 'both' ) : ?>
-                            <div class="custom-post-title">
-                                <?php the_title(); ?>
-                            </div><!-- .custom-post-title -->
                             <div class="custom-post-content">
                                 <?php the_content(); ?>
+                            </div><!-- .custom-post-title -->
+                            <div class="custom-post-title">
+                                <?php the_title(); ?>
                             </div><!-- .custom-post-title -->
                         <?php endif; ?>
 
@@ -399,7 +399,7 @@ require_once('lib/maudience-contactinfo.php');
                         <?php endif; ?>
                     </div>
                 </a>
-                <div class="reserve-now-wrap"><a class="els-button" href='/reservations'>Reserve Now ></a></div><!-- .custom-post-upselltext -->              
+                <!-- <div class="reserve-now-wrap"><a class="els-button" href='/reservations'>Reserve Now ></a></div> --><!-- .custom-post-upselltext -->              
                <!--  <div class="cpt-button-wrap">
                     <a class="ctl-button ctl-viewdetails-button" href="<?php the_permalink() ?>" />View Details <span>>></span></a>
                     <a class="ctl-button ctl-inquire-button" href="/contact/" />Inquire</a>

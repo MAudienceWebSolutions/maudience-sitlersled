@@ -32,7 +32,7 @@
 	        'menu_position' => $menu_position,
 	        'supports'      => $supports,
 	        'rewrite' => array('slug' => $slug),
-	        'has_archive'   => $has_archive,
+	        'has_archive'   => $has_archive
 	      );
 	      register_post_type( $post_type_name, $args ); 
 	    }
@@ -41,7 +41,8 @@
 	    //add_action( 'init', ma_custom_post_type_creator('Vehicles', 'Holds our fleet vehicles', true, 4, array( 'title', 'editor', 'thumbnail' ), true, false, 'fleet'));
 	    //add_action( 'init', ma_custom_post_type_creator('Services', 'Holds our data specific to our services', true, 5, array( 'title', 'editor', 'thumbnail' ), true, false, 'services'));
 	    add_action( 'init', ma_custom_post_type_creator('Testimonials', 'Holds our testimonial specific data', true, 5, array( 'title', 'editor', 'thumbnail' ), true, false, 'testimonials'));
-	    
+	    add_action( 'init', ma_custom_post_type_creator('Content Sliders', 'Holds content slider data', true, 6, array( 'title', 'editor', 'thumbnail' ), false, false, 'content-sliders'));
+
 	    // add_action( 'init', ma_custom_post_type_creator('Staff', 'Holds our staff specific data', true, 5, array( 'title', 'editor', 'thumbnail' ), true, false));
 	    // add_action( 'init', ma_custom_post_type_creator('Car Care Tips', 'Holds our car care tips.', true, 6, array( 'title', 'editor', 'thumbnail', 'excerpt' ), true, false));
 	    // add_action( 'init', ma_custom_post_type_creator('Car Care Videos', 'Holds our car care videos.', true, 7, array( 'title', 'editor', 'thumbnail' ), true, false));

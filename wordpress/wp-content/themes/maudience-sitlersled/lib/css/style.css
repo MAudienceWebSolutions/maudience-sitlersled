@@ -88,15 +88,8 @@ h2 {
 /* SHELL STYLES
 *****************************************************************/
 /*  ******************************** HEADER ********************************  */
-.site-header {
-  margin: 0 0 40px;
-  padding: 0;
-}
 .site-header .inner-wrap > a {
   display: inline-block;
-}
-.site-header .header-image {
-  margin-left: 40px;
 }
 .site-header .header-right.widget-area .textwidget h3 {
   font-weight: 100;
@@ -121,13 +114,6 @@ h2 {
   -ms-filter: "FlipH";
 }
 /*  ******************************** MENUS AND NAVIGATION ********************************  */
-.main-navigation {
-  display: inline-block;
-  max-width: 70%;
-  float: right;
-  vertical-align: sub;
-  margin-top: -30px;
-}
 .main-navigation ul.nav-menu,
 .main-navigation div.nav-menu > ul {
   border: none;
@@ -150,6 +136,40 @@ h2 {
 .main-navigation li.current_page_item > a {
   color: #e04a21;
 }
+.main-navigation .menu-toggle {
+  margin: 10px 0;
+}
+.main-navigation .nav-menu.toggled-on {
+  width: 100%;
+}
+.main-navigation .nav-menu.toggled-on .menu-item {
+  background-color: #e04a21;
+  margin: 0;
+  width: 100%;
+  padding: 10px 0;
+  height: 20px;
+  position: relative;
+}
+.main-navigation .nav-menu.toggled-on .menu-item a {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 1rem;
+  line-height: 3rem;
+}
+.main-navigation .nav-menu.toggled-on .menu-item:hover {
+  background-color: white;
+}
+.main-navigation .nav-menu.toggled-on .menu-item:hover a {
+  color: #e04a21;
+}
+.main-navigation .nav-menu.toggled-on .sub-menu {
+  display: none;
+}
 /*  ******************************** CONTENT ********************************  */
 .site-content {
   margin: 0;
@@ -171,17 +191,6 @@ body footer[role="contentinfo"] p {
 body footer[role="contentinfo"] h2 {
   color: black;
   font-size: 1.5rem;
-}
-body footer[role="contentinfo"] .footer-widget-left.widget-area {
-  width: 45%;
-}
-body footer[role="contentinfo"] .footer-widget-left.widget-area > div {
-  display: inline-block;
-  vertical-align: top;
-}
-body footer[role="contentinfo"] .footer-widget-left.widget-area > div:first-of-type {
-  width: 40%;
-  margin-right: 5%;
 }
 body footer[role="contentinfo"] .footer-widget-center h2:before {
   display: inline-block;
@@ -292,9 +301,7 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   margin-left: 0;
 }
 #home-top-centerfull .soliloquy-outer-container .soliloquy-caption-bottom {
-  max-width: 65%;
   padding: 50px;
-  top: 100px;
 }
 #home-top-centerfull .soliloquy-outer-container .soliloquy-caption-bottom .soliloquy-caption-inside {
   background: none;
@@ -360,9 +367,8 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   margin-left: 0;
 }
 #home-middle .soliloquy-outer-container .content-slider-wrap {
-  max-width: 80%;
-  margin-left: 10%;
-  padding-top: 50px;
+  max-width: 95%;
+  margin-left: 5%;
   position: relative;
 }
 #home-middle .soliloquy-outer-container .content-slider-wrap h2 {
@@ -384,7 +390,7 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   background-color: transparent;
   padding: 10px;
   bottom: 0;
-  top: 50px;
+  top: 0;
 }
 #home-middle .soliloquy-outer-container .soliloquy-pager .soliloquy-pager-item {
   display: block;
@@ -396,7 +402,7 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
 .ui-tabs-vertical .ui-tabs-panel {
   padding: 30px 0 0;
   float: left;
-  width: 65%;
+  width: 100%;
 }
 .ui-tabs-vertical .ui-tabs-panel h2 {
   margin-top: 0;
@@ -421,13 +427,11 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
 }
 .ui-tabs-vertical .ui-tabs-nav {
   padding: 20px 0 0 0;
-  float: left;
-  width: 32.5%;
 }
 .ui-tabs-vertical .ui-tabs-nav li {
   text-indent: -0.7em;
   list-style: none;
-  margin-left: 20px;
+  margin-left: 5px;
   border-bottom: 1px solid #e04a21;
   border-left: 1px solid #e04a21;
   padding-bottom: 5px;
@@ -491,9 +495,6 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   font-style: italic;
   font-size: 3.5rem;
 }
-.template-front-page .entry-content > p {
-  width: 50%;
-}
 .template-front-page .entry-content .ui-tabs-vertical {
   border-top: 1px solid grey;
   overflow: auto;
@@ -511,17 +512,6 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   width: 158px;
   text-align: center;
   line-height: 2.5rem;
-}
-.template-front-page .bottom-section .section-column {
-  display: inline-block;
-}
-.template-front-page .bottom-section .column-left {
-  float: left;
-  width: 60%;
-}
-.template-front-page .bottom-section .column-right {
-  float: right;
-  width: 35%;
 }
 .template-front-page .bottom-section .custom-post-type-list {
   background-color: whitesmoke;
@@ -591,17 +581,36 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
     padding: 25px 0 0;
   }
   body .inner-wrap {
-    max-width: 960px;
+    max-width: 95%;
     margin: auto;
   }
   /* SHELL STYLES
 *****************************************************************/
   /*  ******************************** HEADER ********************************  */
+  .site-header {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .site-header .header-image {
+    margin-bottom: 10px;
+  }
+  .site-header .header-top-right .button-holder {
+    display: block;
+    margin: 30px 0 0;
+  }
   /*  ******************************** MENUS AND NAVIGATION ********************************  */
   /*  ******************************** SIDEBAR ********************************  */
   /*  ******************************** FOOTER ********************************  */
   footer[role="contentinfo"] .inner-footer-wrap {
     padding-bottom: 25px;
+    text-align: center;
+  }
+  footer[role="contentinfo"] .footer-widget-left.widget-area {
+    width: 100%;
+  }
+  footer[role="contentinfo"] .widget-area {
+    margin-bottom: 20px;
   }
   /* PLUGIN STYLES
 *****************************************************************/
@@ -614,39 +623,53 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
 @media only screen and (min-width: 768px) {
   /*  768UP TABLET RESPONSIVE STYLES 
 
-    This file contains all styles that do not change based on device
-    Use the responsive less files to add positioning styles
+	This file contains all styles that do not change based on device
+	Use the responsive less files to add positioning styles
 
-    Table of contents
+	Table of contents
 
-        General Styles
+		General Styles
 
-        Shell Styles
-            - Header
-            - Menus and Navigation
-            - Sidebar
-            - Footer
+		Shell Styles
+			- Header
+			- Menus and Navigation
+			- Sidebar
+			- Footer
 
-        Plug-in Specific Styles
-            - WooCommerce
-            - Gravity Forms
+		Plug-in Specific Styles
+			- WooCommerce
+			- Gravity Forms
 
-        Page Specific Styles
+		Page Specific Styles
 */
   /* ---------------------------------------------- */
   /* TEMPORARY AND IMPORTANT STYLES (to be removed) *\
 \* ---------------------------------------------- */
   /* GENERAL STYLES
 *****************************************************************/
+  body .inner-wrap {
+    max-width: 960px;
+    margin: auto;
+  }
   /* SHELL STYLES
 *****************************************************************/
   /*  ******************************** HEADER ********************************  */
+  .site-header {
+    text-align: left;
+    margin: 20px 0 30px;
+  }
   .site-header .inner-header-wrap {
     position: relative;
   }
+  .site-header .header-image {
+    margin: 0 0 0 40px;
+  }
+  .site-header .header-top-right .button-holder {
+    margin: 0;
+  }
   .site-header .header-right.widget-area {
     position: absolute;
-    top: 40px;
+    top: 15px;
     right: 0;
     margin: 0;
     padding: 0;
@@ -671,6 +694,13 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
     align-items: space-between;
   }
   /*  ******************************** MENUS AND NAVIGATION ********************************  */
+  .main-navigation {
+    display: inline-block;
+    max-width: 70%;
+    float: right;
+    vertical-align: sub;
+    margin-top: -30px;
+  }
   /*  ******************************** SIDEBAR ********************************  */
   /*  ******************************** FOOTER ********************************  */
   footer .inner-wrap {
@@ -690,12 +720,67 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
     -webkit-align-items: space-between;
     align-items: space-between;
   }
+  body footer[role="contentinfo"] .inner-footer-wrap {
+    text-align: left;
+  }
+  body footer[role="contentinfo"] .footer-widget-left.widget-area {
+    width: 45%;
+  }
+  body footer[role="contentinfo"] .footer-widget-left.widget-area > div {
+    display: inline-block;
+    vertical-align: top;
+  }
+  body footer[role="contentinfo"] .footer-widget-left.widget-area > div:first-of-type {
+    width: 40%;
+    margin-right: 5%;
+  }
   /* PLUGIN STYLES
 *****************************************************************/
   /*  ******************************** WOOCOMMERCE ********************************  */
+  /*  ******************************** SOLILOQUY SLIDER ********************************  */
+  #home-top-centerfull .soliloquy-outer-container .soliloquy-caption-bottom {
+    max-width: 65%;
+    padding: 50px;
+    top: 100px;
+  }
+  #home-middle .soliloquy-outer-container .content-slider-wrap {
+    max-width: 80%;
+    margin-left: 10%;
+    padding-top: 50px;
+  }
+  #home-middle .soliloquy-outer-container .soliloquy-pager {
+    top: 50px;
+  }
+  /*  ******************************** JQUERY ********************************  */
+  .ui-tabs-vertical .ui-tabs-panel {
+    width: 65%;
+  }
+  .ui-tabs-vertical .ui-tabs-nav {
+    padding: 20px 0 0 0;
+    float: left;
+    width: 32.5%;
+  }
+  .ui-tabs-vertical .ui-tabs-nav li {
+    margin-left: 20px;
+  }
   /*  ******************************** GRAVITYFORMS ********************************  */
   /* PAGE SPECIFIC STYLES
 *****************************************************************/
+  .template-front-page .entry-content > p {
+    width: 50%;
+  }
+  .template-front-page .bottom-section .section-column {
+    display: inline-block;
+    max-width: 100%;
+  }
+  .template-front-page .bottom-section .column-left {
+    float: left;
+    width: 60%;
+  }
+  .template-front-page .bottom-section .column-right {
+    float: right;
+    width: 35%;
+  }
 }
 /* LARGE DESKTOP + */
 @media only screen and (min-width: 1200px) {

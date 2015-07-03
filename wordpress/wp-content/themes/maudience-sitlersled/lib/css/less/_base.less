@@ -66,14 +66,8 @@
 	/*  ******************************** HEADER ********************************  */
 
 		.site-header {
-			margin: 0 0 40px;
-			padding: 0;
 
-			.inner-wrap > a {
-				display: inline-block;
-			}
-
-			.header-image { margin-left: 40px; }
+			.inner-wrap > a { display: inline-block; }
 
 			.header-right.widget-area {
 
@@ -108,11 +102,6 @@
 	/*  ******************************** MENUS AND NAVIGATION ********************************  */
 
 		.main-navigation {
-			display: inline-block;
-			max-width: 70%;
-			float: right;
-			vertical-align: sub;
-			margin-top: -30px;
 
 			ul.nav-menu,
 			div.nav-menu > ul {
@@ -134,6 +123,45 @@
 				}
 
 				&.current_page_item > a { color: @child-color-orange; }
+			}
+
+			.menu-toggle {
+				margin: 10px 0;
+			}
+
+			.nav-menu.toggled-on {
+				width: 100%;
+
+				.menu-item {
+					background-color: @child-color-orange;
+					margin: 0;
+					width: 100%;
+					padding: 10px 0;
+					height: 20px;
+					position: relative;
+
+					a {
+						text-decoration: none;
+						color: white;
+						position: absolute;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						font-size: 1rem;
+						line-height: 3rem;
+					}
+
+					&:hover {
+						background-color: white;
+
+						a {
+							color: @child-color-orange;
+						}
+					}
+				}
+
+				.sub-menu { display: none; }
 			}
 		}
 
@@ -161,20 +189,6 @@
 		h2 {
 			color: black;
 			font-size: 1.5rem;
-		}
-
-		.footer-widget-left.widget-area {
-			width: 45%;
-
-			> div {
-				display: inline-block;
-				vertical-align: top;
-
-				&:first-of-type {
-					width: 40%;
-					margin-right: 5%;
-				}
-			}
 		}
 
 		.footer-widget-center {
@@ -310,9 +324,9 @@
 
 		#home-top-centerfull .soliloquy-outer-container {
 			.soliloquy-caption-bottom{
-				max-width: 65%;
+				//max-width: 65%;
 				padding: 50px;
-				top: 100px;
+				// top: 100px;
 
 				.soliloquy-caption-inside {
 					background: none;
@@ -389,9 +403,8 @@
 		#home-middle .soliloquy-outer-container {		
 
 			.content-slider-wrap {
-				max-width: 80%;
-				margin-left: 10%;
-				padding-top: 50px;
+				max-width: 95%;
+				margin-left: 5%;
 				position: relative;
 
 				h2 {
@@ -416,7 +429,7 @@
 				background-color: transparent;
 				padding: 10px;
 				bottom: 0;
-				top: 50px;
+				top: 0;
 
 				.soliloquy-pager-item {
 					display: block;
@@ -432,7 +445,7 @@
 			.ui-tabs-panel {
 				padding: 30px 0 0;
 				float: left;
-				width: 65%;
+				width: 100%;
 
 				h2 {
 					margin-top: 0;
@@ -449,17 +462,13 @@
 
 			.ui-tabs-nav {
 				padding: 20px 0 0 0;
-				float: left;
-				width: 32.5%;
+				// float: left;
+				// width: 32.5%;
 
 				li {
-					// clear: left;
-					// border-bottom-width: 1px;
-					// border-right-width: 0;
-					// padding-left: 1em; 
 					text-indent: -.7em;
 					list-style: none;
-					margin-left: 20px;
+					margin-left: 5px;
 					border-bottom: 1px solid @child-color-orange;
 					border-left: 1px solid @child-color-orange;
 					padding-bottom: 5px;
@@ -545,8 +554,6 @@
 
 		.entry-content {
 
-			> p { width: 50%; }
-
 			.ui-tabs-vertical {
 				border-top: 1px solid grey;
 				overflow: auto;
@@ -567,17 +574,10 @@
 				line-height: 2.5rem;
 			}
 
-			.section-column { display: inline-block; }
-
-			.column-left {
-				float: left; 
-				width: 60%;
-			}
-
-			.column-right {
-				float: right;
-				width: 35%;
-			}
+			// .section-column { 
+			// 	max-width: 95%;
+			// 	margin: auto;
+			// }
 
 			.custom-post-type-list {
 				background-color: whitesmoke;

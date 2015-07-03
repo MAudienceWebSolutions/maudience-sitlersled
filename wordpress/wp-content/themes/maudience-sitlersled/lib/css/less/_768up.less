@@ -1,23 +1,23 @@
 /*  768UP TABLET RESPONSIVE STYLES 
 
-    This file contains all styles that do not change based on device
-    Use the responsive less files to add positioning styles
+	This file contains all styles that do not change based on device
+	Use the responsive less files to add positioning styles
 
-    Table of contents
+	Table of contents
 
-        General Styles
+		General Styles
 
-        Shell Styles
-            - Header
-            - Menus and Navigation
-            - Sidebar
-            - Footer
+		Shell Styles
+			- Header
+			- Menus and Navigation
+			- Sidebar
+			- Footer
 
-        Plug-in Specific Styles
-            - WooCommerce
-            - Gravity Forms
+		Plug-in Specific Styles
+			- WooCommerce
+			- Gravity Forms
 
-        Page Specific Styles
+		Page Specific Styles
 */
 
 /* ---------------------------------------------- */
@@ -27,54 +27,259 @@
 /* GENERAL STYLES
 *****************************************************************/
 
+    //overwrite twentytwelve positioning with our own
+        body {
+
+            .inner-wrap {
+                max-width: 960px;
+                margin: auto;
+            }
+        }
+
 /* SHELL STYLES
 *****************************************************************/
 
-    /*  ******************************** HEADER ********************************  */
-        
-        .site-header {
-            
+	/*  ******************************** HEADER ********************************  */
+		
+		.site-header {
+			text-align: left;
+			margin: 20px 0 30px;
 
-            .inner-header-wrap {
-                position: relative;
-            }
+			.inner-header-wrap {
+				position: relative;
+			}
 
-            .header-right.widget-area {
-                position: absolute;
-                top: 40px;
-                right: 0;
-                margin: 0;
-                padding: 0;
-                width: auto;
-                text-align: right;
+			.header-image { margin: 0 0 0 40px; }
 
-                .textwidget {
-                    .maudience-flexbox(space-between);
+			.header-top-right .button-holder { margin: 0; }
 
-                    h3 {
-                        
-                    }
+			.header-right.widget-area {
+				position: absolute;
+				top: 15px;
+				right: 0;
+				margin: 0;
+				padding: 0;
+				width: auto;
+				text-align: right;
 
-                    .button {
-                        
-                    }
-                }
-            }
-        }
+				.textwidget {
+					.maudience-flexbox(space-between);
 
-    /*  ******************************** MENUS AND NAVIGATION ********************************  */
-    /*  ******************************** SIDEBAR ********************************  */
-    /*  ******************************** FOOTER ********************************  */
+					h3 {
+						
+					}
 
-        footer .inner-wrap {//line up our custom widget areas in the footer
-            .maudience-flexbox(space-between);//line em up
-        }
+					.button {
+						
+					}
+				}
+			}
+		}
+
+	/*  ******************************** MENUS AND NAVIGATION ********************************  */
+
+		.main-navigation {
+			display: inline-block;
+			max-width: 70%;
+			float: right;
+			vertical-align: sub;
+			margin-top: -30px;
+		}
+
+	/*  ******************************** SIDEBAR ********************************  */
+	/*  ******************************** FOOTER ********************************  */
+
+		footer .inner-wrap {//line up our custom widget areas in the footer
+			.maudience-flexbox(space-between);//line em up
+		}
+
+
+		body footer[role="contentinfo"] {
+			
+			.inner-footer-wrap { text-align: left; }
+
+			.footer-widget-left.widget-area {
+				width: 45%;
+
+				> div {
+					display: inline-block;
+					vertical-align: top;
+
+					&:first-of-type {
+						width: 40%;
+						margin-right: 5%;
+					}
+				}
+			}
+		}
 
 /* PLUGIN STYLES
 *****************************************************************/
 
-    /*  ******************************** WOOCOMMERCE ********************************  */
-    /*  ******************************** GRAVITYFORMS ********************************  */
+	/*  ******************************** WOOCOMMERCE ********************************  */
+	/*  ******************************** SOLILOQUY SLIDER ********************************  */
+
+
+		#home-top-centerfull .soliloquy-outer-container {
+
+			.soliloquy-caption-bottom{
+				max-width: 65%;
+				padding: 50px;
+				top: 100px;
+
+				.content-slider-wrap {
+					// > h2 {
+					// 	color: black;
+					// 	background-image: url('../images/slider-title-background.png');
+					// 	height: 30px;
+					// 	width: 170px;
+					// 	text-align: center;
+					// 	line-height: 2.25rem;
+					// 	background-size: cover;
+					// 	background-repeat: no-repeat;
+					// 	font-size: 1.05rem;
+					// }
+
+					// > .p-wrap {
+					// 	border: 2px solid white;
+					// 	padding: 5px;
+					// 	margin: 0 0 10px;
+
+					// 	> p {
+					// 		background-color: fade(black, 25%);
+					// 		padding: 15px;
+					// 		font-size: 2.25rem;
+					// 		text-shadow: 1px 1px 1px black;
+					// 		font-family: "Josefin Slab", arial, sans-serif;
+					// 		font-weight: 300;
+
+					// 		strong { text-shadow: 1px 1px 1px black; }
+					// 	}
+					// }
+
+					// > h3 {
+					// 	font-family: Lobster;
+					// 	text-transform: lowercase;
+					// 	display: inline-block;
+					// 	font-size: 3.25rem;
+					// 	text-shadow: 1px 1px 1px black;
+					// 	text-rendering: geometricPrecision;
+					// }
+
+					// > a {
+					// 	color: white;
+					// 	background-image: url('../images/button-background-orange.png');
+					// 	width: 159px;
+					// 	height: 37px;
+					// 	line-height: 37px;
+					// 	display: inline-block;
+					// 	font-family: "Open Sans";
+					// 	text-align: center;
+					// 	margin-left: 20px;
+					// }
+				}
+			}
+
+			.soliloquy-pager {
+				// width: auto;
+				// margin: 0 10% 0 0;
+				// position: absolute;
+				// height: 34px;
+				// text-align: left;
+				// background-color: fade(black, 50%);
+				// padding: 10px;
+				// bottom: 0;
+				// right: 0;
+
+				//.soliloquy-pager-item:first-child { margin-left: 0; }
+			}
+		}
+
+		#home-middle .soliloquy-outer-container {		
+
+			.content-slider-wrap {
+				max-width: 80%;
+				margin-left: 10%;
+				padding-top: 50px;
+				// position: relative;
+
+				h2 {
+					// font-size: 3rem;
+					// font-family: "Josefin Slab", arial, sans-serif;
+					// font-weight: 300;
+					// text-shadow: 1px 1px 1px black;
+
+					span {
+						// font-family: "Lobster";
+						// text-shadow: 1px 1px 1px black;
+					}			
+				}
+			}		
+
+			.soliloquy-pager {
+				// width: auto;
+				// margin: 0 10% 0 0;
+				// position: absolute;
+				// height: 34px;
+				// text-align: left;
+				// background-color: transparent;
+				// padding: 10px;
+				// bottom: 0;
+				top: 50px;
+
+				.soliloquy-pager-item {
+					// display: block;
+				}
+			}
+		}
+	/*  ******************************** JQUERY ********************************  */
+
+		.ui-tabs-vertical {
+
+			.ui-tabs-panel {
+				width: 65%;
+			}
+
+			.ui-tabs-nav {
+				padding: 20px 0 0 0;
+				float: left;
+				width: 32.5%;
+
+				li {
+					margin-left: 20px;
+				}
+			}
+		}
+	/*  ******************************** GRAVITYFORMS ********************************  */
 
 /* PAGE SPECIFIC STYLES
 *****************************************************************/
+
+	.template-front-page {
+
+		.entry-content {
+
+			> p { width: 50%; }
+
+			.ui-tabs-vertical {
+			}
+		}
+
+		.bottom-section {
+
+			.section-column {
+				display: inline-block;
+				max-width: 100%;
+			}
+
+			.column-left {
+				float: left; 
+				width: 60%;
+			}
+
+			.column-right {
+				float: right;
+				width: 35%;
+			}
+		}
+	}

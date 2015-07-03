@@ -395,6 +395,25 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
 #home-middle .soliloquy-outer-container .soliloquy-pager .soliloquy-pager-item {
   display: block;
 }
+#home-bottom-left .gform_footer .button {
+  color: white;
+  background-image: url('../images/button-background-orange.png');
+  width: 130px;
+  height: 45px;
+  display: inline-block;
+  font-family: "Open Sans";
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-size: 1rem;
+  padding: 0;
+  float: right;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
 /*  ******************************** JQUERY ********************************  */
 .ui-tabs-vertical {
   width: 100%;

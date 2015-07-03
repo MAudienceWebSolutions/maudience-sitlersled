@@ -298,6 +298,20 @@ body footer[role="contentinfo"] .footer-widget-left.widget-area > div:first-of-t
   text-align: center;
   margin-left: 20px;
 }
+#home-top-centerfull .soliloquy-outer-container .soliloquy-pager {
+  width: auto;
+  margin: 0 10% 0 0;
+  position: absolute;
+  height: 34px;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  bottom: 0;
+  right: 0;
+}
+#home-top-centerfull .soliloquy-outer-container .soliloquy-pager .soliloquy-pager-item:first-child {
+  margin-left: 0;
+}
 /*  ******************************** JQUERY ********************************  */
 .ui-tabs-vertical {
   width: 100%;

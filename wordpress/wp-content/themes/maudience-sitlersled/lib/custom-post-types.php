@@ -19,7 +19,7 @@
 	        'new_item'           => __( 'New '.$post_type_name ),
 	        'all_items'          => __( 'All '.$post_type_name.$plural ),
 	        'view_item'          => __( 'View '.$post_type_name ),
-	        'search_items'       => __( 'Search'.$post_type_name.$plural ),
+	        'search_items'       => __( 'Search '.$post_type_name.$plural ),
 	        'not_found'          => __( 'No '.$post_type_name.$plural.' found' ),
 	        'not_found_in_trash' => __( 'No '.$post_type_name.$plural.' found in the Trash' ), 
 	        'parent_item_colon'  => '',
@@ -31,7 +31,8 @@
 	        'public'        => $public,
 	        'menu_position' => $menu_position,
 	        'supports'      => $supports,
-	        'rewrite' => array('slug' => $slug),
+	        'taxonomies'   	=> array('category'),
+	        'rewrite' 		=> array('slug' => $slug),
 	        'has_archive'   => $has_archive
 	      );
 	      register_post_type( $post_type_name, $args ); 
@@ -41,7 +42,37 @@
 	    //add_action( 'init', ma_custom_post_type_creator('Vehicles', 'Holds our fleet vehicles', true, 4, array( 'title', 'editor', 'thumbnail' ), true, false, 'fleet'));
 	    //add_action( 'init', ma_custom_post_type_creator('Services', 'Holds our data specific to our services', true, 5, array( 'title', 'editor', 'thumbnail' ), true, false, 'services'));
 	    add_action( 'init', ma_custom_post_type_creator('Testimonials', 'Holds our testimonial specific data', true, 5, array( 'title', 'editor', 'thumbnail' ), true, false, 'testimonials'));
-	    add_action( 'init', ma_custom_post_type_creator('Content Sliders', 'Holds content slider data', true, 6, array( 'title', 'editor', 'thumbnail' ), false, false, 'content-sliders'));
+	    add_action( 'init', ma_custom_post_type_creator('Content Sliders', 'Holds content slider data', true, 6, array( 'title', 'editor', 'thumbnail' ), false, false, 'content-sliders'), 1000);
+
+	    // add categories to sliders
+		add_action( 'init', 'create_contentsliders_taxonomies', 99 );
+		function create_contentsliders_taxonomies() {
+			// Add new taxonomy, make it hierarchical (like categories)
+			$labels = array(
+				'name'              => _x( 'Categories', 'taxonomy general name' ),
+				'singular_name'     => _x( 'Category', 'taxonomy singular name' ),
+				'search_items'      => __( 'Search Categories' ),
+				'all_items'         => __( 'All Categories' ),
+				'parent_item'       => __( 'Parent Category' ),
+				'parent_item_colon' => __( 'Parent Category:' ),
+				'edit_item'         => __( 'Edit Category' ),
+				'update_item'       => __( 'Update Category' ),
+				'add_new_item'      => __( 'Add New Category' ),
+				'new_item_name'     => __( 'New Category Name' ),
+				'menu_name'         => __( 'Category' ),
+			);
+
+			$args = array(
+				'hierarchical'      => true,
+				'labels'            => $labels,
+				'show_ui'           => true,
+				'show_admin_column' => true,
+				'query_var'         => true,
+				'rewrite'           => array( 'slug' => 'category' ),
+			);
+
+			register_taxonomy( 'category', array( 'contentsliders' ), $args );
+		}
 
 	    // add_action( 'init', ma_custom_post_type_creator('Staff', 'Holds our staff specific data', true, 5, array( 'title', 'editor', 'thumbnail' ), true, false));
 	    // add_action( 'init', ma_custom_post_type_creator('Car Care Tips', 'Holds our car care tips.', true, 6, array( 'title', 'editor', 'thumbnail', 'excerpt' ), true, false));

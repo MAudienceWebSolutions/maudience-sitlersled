@@ -593,7 +593,7 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   font-size: 1.5rem;
 }
 .page-template-default article .entry-content {
-  padding-top: 5rem;
+  padding-top: 2.5rem;
   border-top: 5px solid #e04a21;
 }
 .page-template-default .widget-title {

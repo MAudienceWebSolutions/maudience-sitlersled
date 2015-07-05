@@ -563,7 +563,7 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
 .page-template-default .pre-article {
   width: 100;
   background-color: lightgrey;
-  padding: 20px 10px;
+  padding: 20px 1%;
   margin-bottom: 40px;
 }
 .page-template-default .pre-article .entry-title {
@@ -572,6 +572,10 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   font-size: 2rem;
   letter-spacing: 1.5px;
   font-kerning: none;
+}
+.page-template-default article {
+  margin: 0 1% 5rem;
+  min-height: 20vh;
 }
 .page-template-default article .entry-header {
   margin: 0;

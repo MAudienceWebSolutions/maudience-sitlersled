@@ -64,3 +64,8 @@
 
 	<div id="main" class="wrapper">
 		<div id="inner-main-wrap" class="inner-main-wrap inner-wrap">
+			<?php if(!is_page_template( 'front-page' )): ?>
+				<section class="pre-article">
+					<h1 class="entry-title"><?php the_title(); ?></h1>
+				</section>
+			<?php endif; ?>

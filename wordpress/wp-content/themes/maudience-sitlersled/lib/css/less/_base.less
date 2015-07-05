@@ -652,7 +652,7 @@
 		article {
 			margin: 0 1% 5rem;
 			min-height: 20vh;
-			
+
 			.entry-header { margin: 0; }
 
 			.entry-title {
@@ -667,6 +667,33 @@
 				font-weight: 100;
 				text-transform: uppercase;
 				font-size: 1.5rem;
+			}
+		}
+
+		.widget-title {
+			background-color: lightgrey;
+			color: black;
+			padding: 0 5%;
+			font-size: 1.25rem;
+			font-weight: 100;
+			width: 90%;
+			position: relative;
+			overflow: hidden;
+			height: 40px;
+			line-height: 40px;
+			text-transform: capitalize;
+
+			&:after {
+				content: " > ";
+				display: inline-block;
+				height: 40px;
+				width: 40px;
+				background-color: #e04a21;
+				color: white;
+				text-align: center;
+				vertical-align: super;
+				position: absolute;
+				right: 0;
 			}
 		}
 	}

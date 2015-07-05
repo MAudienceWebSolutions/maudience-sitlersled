@@ -592,6 +592,31 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   text-transform: uppercase;
   font-size: 1.5rem;
 }
+.page-template-default .widget-title {
+  background-color: lightgrey;
+  color: black;
+  padding: 0 5%;
+  font-size: 1.25rem;
+  font-weight: 100;
+  width: 90%;
+  position: relative;
+  overflow: hidden;
+  height: 40px;
+  line-height: 40px;
+  text-transform: capitalize;
+}
+.page-template-default .widget-title:after {
+  content: " > ";
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: #e04a21;
+  color: white;
+  text-align: center;
+  vertical-align: super;
+  position: absolute;
+  right: 0;
+}
 /* MOBILE - STARTING BOX/POSITION STYLES */
 @media only screen and (min-width: 0px) {
   /*  0UP RESPONSIVE BASE STYLES

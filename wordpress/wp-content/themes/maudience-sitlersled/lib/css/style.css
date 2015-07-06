@@ -85,6 +85,22 @@ img.wp-post-image {
 h2 {
   font-size: 1.35rem;
 }
+.pre-article {
+  width: 100;
+  background-color: lightgrey;
+  padding: 20px 1%;
+  margin-bottom: 40px;
+}
+.pre-article .entry-title {
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  font-kerning: none;
+}
+.site-content article {
+  border-bottom: 0;
+}
 /* SHELL STYLES
 *****************************************************************/
 /*  ******************************** HEADER ********************************  */
@@ -560,19 +576,6 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   filter: FlipH;
   -ms-filter: "FlipH";
 }
-.page-template-default .pre-article {
-  width: 100;
-  background-color: lightgrey;
-  padding: 20px 1%;
-  margin-bottom: 40px;
-}
-.page-template-default .pre-article .entry-title {
-  text-transform: uppercase;
-  font-weight: 100;
-  font-size: 2rem;
-  letter-spacing: 1.5px;
-  font-kerning: none;
-}
 .page-template-default article {
   margin: 0 1% 0;
   min-height: 20vh;
@@ -591,10 +594,7 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   font-weight: 100;
   text-transform: uppercase;
   font-size: 1.5rem;
-}
-.page-template-default article .entry-content {
-  padding-top: 2.5rem;
-  border-top: 5px solid #e04a21;
+  border-bottom: 5px solid #e04a21;
 }
 .page-template-default .widget-title {
   background-color: lightgrey;
@@ -620,6 +620,132 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   vertical-align: super;
   position: absolute;
   right: 0;
+}
+.archive.post-type-archive-projects #primary,
+.single.single-projects #primary {
+  width: 100%;
+}
+.archive.post-type-archive-projects #secondary,
+.single.single-projects #secondary,
+.archive.post-type-archive-projects .archive-header,
+.single.single-projects .archive-header,
+.archive.post-type-archive-projects footer.entry-meta,
+.single.single-projects footer.entry-meta {
+  display: none;
+}
+.archive.post-type-archive-projects .entry-header,
+.single.single-projects .entry-header {
+  margin-bottom: 0;
+}
+.archive.post-type-archive-projects .entry-title a,
+.single.single-projects .entry-title a {
+  color: black;
+}
+.archive.post-type-archive-projects .secondary-title,
+.single.single-projects .secondary-title {
+  margin-top: 5px;
+  border-bottom: 5px solid #e04a21;
+  width: 50%;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 100;
+  font-size: 1.5rem;
+  line-height: 1rem;
+}
+.archive.post-type-archive-projects .project-wrap .column,
+.single.single-projects .project-wrap .column {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+.archive.post-type-archive-projects .project-wrap .project-right,
+.single.single-projects .project-wrap .project-right {
+  border: 1px solid grey;
+  padding: 10px 20px;
+  max-width: 30%;
+  margin-left: 110px;
+}
+.archive.post-type-archive-projects .project-wrap .project-right h3,
+.single.single-projects .project-wrap .project-right h3 {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+.archive.post-type-archive-projects .project-wrap .stats-list,
+.single.single-projects .project-wrap .stats-list {
+  padding: 20px 0 0 0;
+}
+.archive.post-type-archive-projects .project-wrap .stats-list li,
+.single.single-projects .project-wrap .stats-list li {
+  text-indent: -0.7em;
+  list-style: none;
+  margin-left: 5px;
+  border-bottom: 1px solid #e04a21;
+  border-left: 1px solid #e04a21;
+  padding-bottom: 5px;
+  margin-right: 50px;
+  font-weight: bold;
+  position: relative;
+}
+.archive.post-type-archive-projects .project-wrap .stats-list li:before,
+.single.single-projects .project-wrap .stats-list li:before {
+  content: "•";
+  color: #e04a21;
+  font-size: 3.5rem;
+  display: inline-block;
+  width: 35px;
+  line-height: 3rem;
+  position: relative;
+  top: 10px;
+  left: 11px;
+  z-index: 1;
+}
+.archive.post-type-archive-projects .project-wrap .stats-list li:after,
+.single.single-projects .project-wrap .stats-list li:after {
+  content: " ";
+  color: #e04a21;
+  font-size: 0;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -4px;
+  height: 29px;
+  width: 20px;
+  background-color: white;
+  z-index: 0;
+}
+.archive.post-type-archive-projects .project-wrap .stats-list li a,
+.single.single-projects .project-wrap .stats-list li a {
+  color: black;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.15rem;
+}
+.archive.post-type-archive-projects .project-wrap .request-quote,
+.single.single-projects .project-wrap .request-quote {
+  color: white;
+  background-image: url('../images/button-background-orange.png');
+  width: 150px;
+  height: 35px;
+  display: inline-block;
+  font-family: "Open Sans";
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-size: 1rem;
+  padding: 0;
+  float: right;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 20px;
+  background-position: 0;
+  line-height: 35px;
+}
+.single.single-projects .site-content .entry-title {
+  display: none;
 }
 /* MOBILE - STARTING BOX/POSITION STYLES */
 @media only screen and (min-width: 0px) {

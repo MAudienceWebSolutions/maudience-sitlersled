@@ -42,7 +42,8 @@
 	    //add_action( 'init', ma_custom_post_type_creator('Vehicles', 'Holds our fleet vehicles', true, 4, array( 'title', 'editor', 'thumbnail' ), true, false, 'fleet'));
 	    //add_action( 'init', ma_custom_post_type_creator('Services', 'Holds our data specific to our services', true, 5, array( 'title', 'editor', 'thumbnail' ), true, false, 'services'));
 	    add_action( 'init', ma_custom_post_type_creator('Testimonials', 'Holds our testimonial specific data', true, 5, array( 'title', 'editor', 'thumbnail' ), true, false, 'testimonials'));
-	    add_action( 'init', ma_custom_post_type_creator('Content Sliders', 'Holds content slider data', true, 6, array( 'title', 'editor', 'thumbnail' ), false, false, 'content-sliders'), 1000);
+	    add_action( 'init', ma_custom_post_type_creator('Content Sliders', 'Holds content slider data', true, 6, array( 'title', 'editor', 'thumbnail' ), false, false, 'content-sliders'));
+		add_action( 'init', ma_custom_post_type_creator('Projects', 'Holds our project specific data', true, 7, array( 'title', 'editor', 'thumbnail' ), true, false, 'projects'));
 
 	    // add categories to sliders
 		add_action( 'init', 'create_contentsliders_taxonomies', 99 );

@@ -648,7 +648,7 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
 .single.single-projects .secondary-title {
   margin-top: 5px;
   border-bottom: 5px solid #e04a21;
-  width: 50%;
+  max-width: 515px;
   text-transform: uppercase;
   color: black;
   font-weight: 100;
@@ -991,6 +991,12 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
     width: 35%;
   }
   /* ARCHIVES AND SINGLE PAGE */
+  .archive.post-type-archive-projects .secondary-title,
+  .single.single-projects .secondary-title {
+    margin-top: 5px;
+    width: 50%;
+    max-width: none;
+  }
   .archive.post-type-archive-projects .project-wrap .column,
   .single.single-projects .project-wrap .column {
     width: 50%;

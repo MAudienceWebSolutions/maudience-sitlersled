@@ -392,10 +392,20 @@ class Soliloquy_Shortcode {
         if ( ! empty( $imagesrc ) ) {
             $disable_preloading = apply_filters( 'soliloquy_disable_preloading', false, $data );
             $output  = apply_filters( 'soliloquy_output_before_image', $output, $id, $item, $data, $i );
+
+            // Get image dimensions for output, if required
+            if ( $this->get_config( 'dimensions', $data ) ) {
+                $dimensions = array(
+                    'width' => $this->get_config( 'slider_width', $data ),
+                    'height'=> $this->get_config( 'slider_height', $data ),
+                );
+                $dimensions = apply_filters( 'soliloquy_output_image_slide_dimensions', $dimensions, $data );
+            }
+
             if ( 1 === $i && ! $this->is_mobile() || $disable_preloading === true ) {
-                $output .= '<img id="soliloquy-image-' . sanitize_html_class( $id ) . '" class="' . $this->get_slider_item_image_classes( $item, $i, $data ) . '" src="' . esc_url( $imagesrc ) . '"' . ( $this->get_config( 'dimensions', $data ) ? ' width="' . $this->get_config( 'slider_width', $data ) . '" height="' . $this->get_config( 'slider_height', $data ) . '"' : '' ) . ' alt="' . esc_attr( $item['alt'] ) . '"' . apply_filters( 'soliloquy_output_image_attr', '', $id, $item, $data, $i ) . ' />';
+                $output .= '<img id="soliloquy-image-' . sanitize_html_class( $id ) . '" class="' . $this->get_slider_item_image_classes( $item, $i, $data ) . '" src="' . esc_url( $imagesrc ) . '"' . ( $this->get_config( 'dimensions', $data ) ? ' width="' . $dimensions['width'] . '" height="' . $dimensions['height'] . '"' : '' ) . ' alt="' . esc_attr( $item['alt'] ) . '"' . apply_filters( 'soliloquy_output_image_attr', '', $id, $item, $data, $i ) . ' />';
             } else {
-                $output .= '<img id="soliloquy-image-' . sanitize_html_class( $id ) . '" class="' . $this->get_slider_item_image_classes( $item, $i, $data, true ) . '" src="' . esc_url( plugins_url( 'assets/css/images/holder.gif', dirname( dirname( __FILE__ ) ) ) ) . '"' . ( $this->get_config( 'dimensions', $data ) ? ' width="' . $this->get_config( 'slider_width', $data ) . '" height="' . $this->get_config( 'slider_height', $data ) . '"' : '' ) . ' data-soliloquy-src="' . esc_url( $imagesrc ) . '" alt="' . esc_attr( $item['alt'] ) . '"' . apply_filters( 'soliloquy_output_image_attr', '', $id, $item, $data, $i ) . ' />';
+                $output .= '<img id="soliloquy-image-' . sanitize_html_class( $id ) . '" class="' . $this->get_slider_item_image_classes( $item, $i, $data, true ) . '" src="' . esc_url( plugins_url( 'assets/css/images/holder.gif', dirname( dirname( __FILE__ ) ) ) ) . '"' . ( $this->get_config( 'dimensions', $data ) ? ' width="' . $dimensions['width'] . '" height="' . $dimensions['height'] . '"' : '' ) . ' data-soliloquy-src="' . esc_url( $imagesrc ) . '" alt="' . esc_attr( $item['alt'] ) . '"' . apply_filters( 'soliloquy_output_image_attr', '', $id, $item, $data, $i ) . ' />';
             }
             $output  = apply_filters( 'soliloquy_output_after_image', $output, $id, $item, $data, $i );
         }
@@ -483,10 +493,19 @@ class Soliloquy_Shortcode {
                     break;
 
                 default:
+                    // Get image dimensions for output, if required
+                    if ( $this->get_config( 'dimensions', $data ) ) {
+                        $dimensions = array(
+                            'width' => $this->get_config( 'slider_width', $data ),
+                            'height'=> $this->get_config( 'slider_height', $data ),
+                        );
+                        $dimensions = apply_filters( 'soliloquy_output_image_slide_dimensions', $dimensions, $data );
+                    }
+
                     if ( 1 === $i && ! $this->is_mobile() ) {
-                        $output .= '<img id="soliloquy-video-' . sanitize_html_class( $id ) . '" class="' . $this->get_slider_item_video_classes( $item, $i, $data, $vid_type ) . '" src="' . esc_url( $imagesrc ) . '"' . ( $this->get_config( 'dimensions', $data ) ? ' width="' . $this->get_config( 'slider_width', $data ) . '" height="' . $this->get_config( 'slider_height', $data ) . '"' : '' ) . ' alt="' . esc_attr( $item['title'] ) . '"' . apply_filters( 'soliloquy_output_image_attr', '', $id, $item, $data, $i ) . ' />';
+                        $output .= '<img id="soliloquy-video-' . sanitize_html_class( $id ) . '" class="' . $this->get_slider_item_video_classes( $item, $i, $data, $vid_type ) . '" src="' . esc_url( $imagesrc ) . '"' . ( $this->get_config( 'dimensions', $data ) ? ' width="' . $dimensions['width'] . '" height="' . $dimensions['height'] . '"' : '' ) . ' alt="' . esc_attr( $item['title'] ) . '"' . apply_filters( 'soliloquy_output_image_attr', '', $id, $item, $data, $i ) . ' />';
                     } else {
-                        $output .= '<img id="soliloquy-video-' . sanitize_html_class( $id ) . '" class="' . $this->get_slider_item_video_classes( $item, $i, $data, $vid_type, true ) . '" src="' . esc_url( plugins_url( 'assets/css/images/holder.gif', dirname( dirname( __FILE__ ) ) ) ) . '"' . ( $this->get_config( 'dimensions', $data ) ? ' width="' . $this->get_config( 'slider_width', $data ) . '" height="' . $this->get_config( 'slider_height', $data ) . '"' : '' ) . ' data-soliloquy-src="' . esc_url( $imagesrc ) . '" alt="' . esc_attr( $item['title'] ) . '"' . apply_filters( 'soliloquy_output_image_attr', '', $id, $item, $data, $i ) . ' />';
+                        $output .= '<img id="soliloquy-video-' . sanitize_html_class( $id ) . '" class="' . $this->get_slider_item_video_classes( $item, $i, $data, $vid_type, true ) . '" src="' . esc_url( plugins_url( 'assets/css/images/holder.gif', dirname( dirname( __FILE__ ) ) ) ) . '"' . ( $this->get_config( 'dimensions', $data ) ? ' width="' . $dimensions['width'] . '" height="' . $dimensions['height'] . '"' : '' ) . ' data-soliloquy-src="' . esc_url( $imagesrc ) . '" alt="' . esc_attr( $item['title'] ) . '"' . apply_filters( 'soliloquy_output_image_attr', '', $id, $item, $data, $i ) . ' />';
                     }
                     $output .= '<span class="soliloquy-video-icon soliloquy-' . $vid_type . '-video" data-soliloquy-video-type="' . $vid_type . '" data-soliloquy-video-id="' . $vid_id . '" data-soliloquy-video-holder="' . sanitize_html_class( $id ) . '"></span>';
                     $output .= '<div id="' . sanitize_html_class( $id ) . '-holder" class="soliloquy-video-holder" data-soliloquy-slider-id="' . $data['id'] . '"></div>';

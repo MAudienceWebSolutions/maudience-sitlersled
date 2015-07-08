@@ -510,6 +510,7 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
 }
 /* PAGE SPECIFIC STYLES
 *****************************************************************/
+/* FRONT PAGE TEMPLATE */
 .template-front-page .site-content article {
   overflow: visible;
 }
@@ -576,6 +577,7 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   filter: FlipH;
   -ms-filter: "FlipH";
 }
+/* DEFAULT PAGE TEMPLATE */
 .page-template-default article {
   margin: 0 1% 0;
   min-height: 20vh;
@@ -621,6 +623,7 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   position: absolute;
   right: 0;
 }
+/* ARCHIVES AND SINGLE PAGE */
 .archive.post-type-archive-projects #primary,
 .single.single-projects #primary {
   width: 100%;
@@ -654,7 +657,6 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
 }
 .archive.post-type-archive-projects .project-wrap .column,
 .single.single-projects .project-wrap .column {
-  width: 50%;
   display: inline-block;
   vertical-align: top;
 }
@@ -662,8 +664,8 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
 .single.single-projects .project-wrap .project-right {
   border: 1px solid grey;
   padding: 10px 20px;
-  max-width: 30%;
-  margin-left: 110px;
+  width: 90%;
+  max-width: 515px;
 }
 .archive.post-type-archive-projects .project-wrap .project-right h3,
 .single.single-projects .project-wrap .project-right h3 {
@@ -744,6 +746,7 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   background-position: 0;
   line-height: 35px;
 }
+/* SINGLE PAGE */
 .single.single-projects .site-content .entry-title {
   display: none;
 }
@@ -986,6 +989,25 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   .template-front-page .bottom-section .column-right {
     float: right;
     width: 35%;
+  }
+  /* ARCHIVES AND SINGLE PAGE */
+  .archive.post-type-archive-projects .project-wrap .column,
+  .single.single-projects .project-wrap .column {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .archive.post-type-archive-projects .project-wrap .project-right,
+  .single.single-projects .project-wrap .project-right {
+    max-width: 30%;
+    margin-left: 110px;
+  }
+  .archive.post-type-archive-projects .project-wrap .project-right h3,
+  .single.single-projects .project-wrap .project-right h3 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 1.5rem;
   }
 }
 /* LARGE DESKTOP + */

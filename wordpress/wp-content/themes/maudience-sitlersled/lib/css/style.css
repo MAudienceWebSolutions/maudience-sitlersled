@@ -253,22 +253,19 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
 .bottom-footer-wrap {
   background-color: #e04a21;
   color: white;
-  padding: 20px 0;
+  padding: 20px 1%;
   margin-top: 20px;
+  min-height: 50px;
 }
 .bottom-footer-wrap .column {
-  max-width: 50%;
   display: inline-block;
   line-height: 5rem;
   font-weight: 100;
   font-family: 'Open Sans';
+  text-align: center;
 }
 .bottom-footer-wrap .column-left {
-  float: left;
   line-height: 50px;
-}
-.bottom-footer-wrap .column-right {
-  float: left;
 }
 /* PLUGIN STYLES
 *****************************************************************/
@@ -942,6 +939,17 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   body footer[role="contentinfo"] .footer-widget-left.widget-area > div:first-of-type {
     width: 40%;
     margin-right: 5%;
+  }
+  .bottom-footer-wrap .column {
+    max-width: 50%;
+    display: inline-block;
+    text-align: auto;
+  }
+  .bottom-footer-wrap .column-left {
+    float: left;
+  }
+  .bottom-footer-wrap .column-right {
+    float: left;
   }
   /* PLUGIN STYLES
 *****************************************************************/

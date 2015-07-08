@@ -258,7 +258,7 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   min-height: 50px;
 }
 .bottom-footer-wrap .column {
-  display: inline-block;
+  display: block;
   line-height: 5rem;
   font-weight: 100;
   font-family: 'Open Sans';

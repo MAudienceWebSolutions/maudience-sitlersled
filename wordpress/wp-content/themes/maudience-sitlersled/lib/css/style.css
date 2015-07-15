@@ -15,7 +15,7 @@
   padding: 30px;
   margin: 10px 0 0 20px;
   background-image: url('../images/button-border-orange-arrow.png');
-  background-position: 0px 23px;
+  background-position: 0px 22.5px;
   background-size: contain;
   background-repeat: no-repeat;
   font-size: 1.25rem;
@@ -535,8 +535,19 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
 .template-front-page .top-section {
   margin-bottom: 25px;
 }
-.template-front-page .bottom-section {
-  margin-top: 100px;
+.template-front-page .top-centerfull-wrap,
+.template-front-page .middle-section {
+  background-color: #e04a21;
+}
+.template-front-page .top-centerfull-wrap,
+.template-front-page .middle-section,
+.template-front-page .bottom-section,
+.template-front-page .top-columns-wrap {
+  padding: 40px 0;
+}
+.template-front-page .home-top-centerfull,
+.template-front-page .home-middle {
+  box-shadow: 0 8px 6px -6px black;
 }
 .template-front-page .bottom-section h2 {
   color: white;
@@ -550,6 +561,7 @@ body footer[role="contentinfo"] .footer-widget-right .textwidget > p > a:before 
   background-color: whitesmoke;
   padding: 40px;
   line-height: 2rem;
+  border: 1px solid #ccc;
 }
 .template-front-page .bottom-section .custom-post-type-list .custom-post-content:before,
 .template-front-page .bottom-section .custom-post-type-list .custom-post-content:after {

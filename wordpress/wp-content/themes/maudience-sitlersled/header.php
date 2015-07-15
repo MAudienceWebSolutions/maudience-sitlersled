@@ -73,4 +73,4 @@
 				<h1 class="entry-title inner-wrap">Projects</h1>
 			</section>
 		<?php endif; ?>
-		<div id="inner-main-wrap" class="inner-main-wrap inner-wrap">
+		<?php if( !is_front_page() ) : ?><div id="inner-main-wrap" class="inner-main-wrap inner-wrap"><?php endif; ?>

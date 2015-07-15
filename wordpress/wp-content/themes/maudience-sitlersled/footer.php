@@ -9,7 +9,7 @@
  * @since Twenty Twelve 1.0
  */
 ?>
-		</div><!-- #inner-main-wrap .inner-wrap -->
+		<?php if( !is_front_page() ) : ?></div><!-- #inner-main-wrap .inner-wrap --><?php endif; ?>
 	</div><!-- #main .wrapper -->
 	<footer id="colophon" role="contentinfo">
 		<div id="inner-footer-wrap" class="inner-footer-wrap inner-wrap">

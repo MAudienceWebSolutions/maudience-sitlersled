@@ -964,7 +964,7 @@ class Soliloquy_Metaboxes {
                         </th>
                         <td>
                             <input id="soliloquy-config-dimensions" type="checkbox" name="_soliloquy[dimensions]" value="<?php echo $this->get_config( 'dimensions', $this->get_config_default( 'dimensions' ) ); ?>" <?php checked( $this->get_config( 'dimensions', $this->get_config_default( 'dimensions' ) ), 1 ); ?> />
-                            <span class="description"><?php _e( 'Enables or disables the width and height attributes on the img element. Only needs to be enabled if you need to meet Google Pagespeeds requirements.', 'soliloquy' ); ?></span>
+                            <span class="description"><?php _e( 'Enables or disables the width and height attributes on the img element. Only needs to be enabled if you need to meet Google Pagespeeds requirements, or if you\'re using Photon CDN and having issues with slider images displaying.', 'soliloquy' ); ?></span>
                         </td>
                     </tr>
                     <tr id="soliloquy-config-slider-box">

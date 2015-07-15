@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Soliloquy package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Soliloquy 2.4.1.9\n"
+"Project-Id-Version: Soliloquy 2.4.2.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/soliloquy\n"
-"POT-Creation-Date: 2015-07-02 16:20:53+00:00\n"
+"POT-Creation-Date: 2015-07-09 15:23:06+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -619,7 +619,8 @@ msgstr ""
 #: includes/admin/metaboxes.php:967
 msgid ""
 "Enables or disables the width and height attributes on the img element. Only "
-"needs to be enabled if you need to meet Google Pagespeeds requirements."
+"needs to be enabled if you need to meet Google Pagespeeds requirements, or "
+"if you're using Photon CDN and having issues with slider images displaying."
 msgstr ""
 
 #: includes/admin/metaboxes.php:972
@@ -1245,7 +1246,7 @@ msgstr ""
 msgid "Soliloquy Sliders"
 msgstr ""
 
-#. #-#-#-#-#  soliloquy.pot (Soliloquy 2.4.1.9)  #-#-#-#-#
+#. #-#-#-#-#  soliloquy.pot (Soliloquy 2.4.2.0)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: includes/global/posttype.php:52 includes/global/posttype.php:62
 #: includes/global/widget.php:64

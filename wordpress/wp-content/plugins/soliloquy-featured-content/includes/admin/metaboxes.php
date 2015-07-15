@@ -47,12 +47,58 @@ class Soliloquy_Featured_Content_Metaboxes {
     	$this->base = Soliloquy_Featured_Content::get_instance();
 
     	// Actions and filters
+    	add_action( 'wp_loaded', array( $this, 'register_publish_hooks' ) );
     	add_action( 'soliloquy_metabox_styles', array( $this, 'styles' ) );
     	add_action( 'soliloquy_metabox_scripts', array( $this, 'scripts' ) );
     	add_filter( 'soliloquy_defaults', array( $this, 'defaults' ), 10, 2 );
     	add_filter( 'soliloquy_slider_types', array( $this, 'types' ) );
     	add_action( 'soliloquy_display_fc', array( $this, 'settings_screen' ) );
     	add_filter( 'soliloquy_save_settings', array( $this, 'save' ), 10, 2 );
+
+    }
+
+    /**
+     * Registers publish and publish future actions for each public Post Type,
+     * so FC caches can be flushed
+     *
+     * @since 2.3.0
+     */
+    public function register_publish_hooks() {
+
+    	// Get public Post Types
+        $post_types = get_post_types( array(
+            'public' => true,
+        ), 'objects' );
+
+    	// Register publish hooks for each Post Type
+        foreach ( $post_types as $post_type => $data ) {
+            add_action( 'publish_' . $post_type, array( $this, 'flush_caches' ) );
+            add_action( 'publish_future_' . $post_type, array( $this, 'flush_caches' ), 10, 1 ); 
+        }
+
+    }
+
+    /**
+     * Flushes Addon's caches
+     *
+     * @since 2.3.0
+     */
+    public function flush_caches( $post_id ) {
+
+    	// Get instances
+    	$instance = Soliloquy_Metaboxes::get_instance();
+
+    	// Get all Featured Content Sliders
+    	$sliders = Soliloquy::get_instance()->get_sliders();
+    	foreach ( $sliders as $slider ) {
+    		// Skip non-FC sliders
+    		if ( $slider['config']['type'] !== 'fc' ) {
+    			continue;
+    		}
+    		
+    		// Delete transient for this FC slider
+    		delete_transient( '_sol_fc_' . $slider['id'] );
+    	}
 
     }
 

@@ -913,6 +913,15 @@ class Soliloquy_Metaboxes {
                             <span class="description"><?php _e( 'Pauses the slider (if set to autostart) when a visitor hovers over the slider.', 'soliloquy' ); ?></span>
                         </td>
                     </tr>
+                    <tr id="soliloquy-config-mousewheel-box">
+                        <th scope="row">
+                            <label for="soliloquy-config-mousewheel"><?php _e( 'Enable Mousewheel Navigation?', 'soliloquy' ); ?></label>
+                        </th>
+                        <td>
+                            <input id="soliloquy-config-mousewheel" type="checkbox" name="_soliloquy[mousewheel]" value="<?php echo $this->get_config( 'mousewheel', $this->get_config_default( 'mousewheel' ) ); ?>" <?php checked( $this->get_config( 'mousewheel', $this->get_config_default( 'mousewheel' ) ), 1 ); ?> />
+                            <span class="description"><?php _e( 'Enables or disables mousewheel navigation in the slider.', 'soliloquy' ); ?></span>
+                        </td>
+                    </tr>
                     <tr id="soliloquy-config-loop-box">
                         <th scope="row">
                             <label for="soliloquy-config-loop"><?php _e( 'Loop Slider?', 'soliloquy' ); ?></label>
@@ -1224,6 +1233,7 @@ class Soliloquy_Metaboxes {
         $settings['config']['pauseplay']     = isset( $_POST['_soliloquy']['pauseplay'] ) ? 1 : 0;
         $settings['config']['mobile_caption']= isset( $_POST['_soliloquy']['mobile_caption'] ) ? 1 : 0;
         $settings['config']['hover']         = isset( $_POST['_soliloquy']['hover'] ) ? 1 : 0;
+        $settings['config']['mousewheel']    = isset( $_POST['_soliloquy']['mousewheel'] ) ? 1 : 0;
         $settings['config']['slider']        = isset( $_POST['_soliloquy']['slider'] ) ? 1 : 0;
         $settings['config']['mobile']        = isset( $_POST['_soliloquy']['mobile'] ) ? 1 : 0;
         $settings['config']['mobile_width']  = absint( $_POST['_soliloquy']['mobile_width'] );

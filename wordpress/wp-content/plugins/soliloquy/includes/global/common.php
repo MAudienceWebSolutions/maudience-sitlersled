@@ -320,6 +320,7 @@ class Soliloquy_Common {
             'pauseplay'         => 0,
             'mobile_caption'    => 0,
             'hover'             => 0,
+            'mousewheel'        => 0,
             'keyboard'          => 1,
             'css'               => 1,
             'loop'              => 1,

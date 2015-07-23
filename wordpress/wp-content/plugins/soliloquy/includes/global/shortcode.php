@@ -937,7 +937,9 @@ class Soliloquy_Shortcode {
 
                     soliloquy_container_<?php echo $data['id']; ?>.parent().attr('data-soliloquy-loaded', 1);
 
-                    <?php do_action( 'soliloquy_api_on_load', $data ); ?>
+                    <?php
+                    do_action( 'soliloquy_api_on_load', $data ); 
+                    ?>
                 },
                 onSlideBefore: function(element, oldIndex, newIndex){
                     soliloquy_container_<?php echo $data['id']; ?>.find('.soliloquy-active-slide').removeClass('soliloquy-active-slide').attr('aria-hidden','true');
@@ -978,9 +980,36 @@ class Soliloquy_Shortcode {
                 <?php do_action( 'soliloquy_api_config_end', $data ); ?>
             });
 
-            <?php do_action( 'soliloquy_api_slider', $data ); ?>
+            <?php
+            do_action( 'soliloquy_api_slider', $data ); 
 
-            <?php 
+            // Mousewheel support
+            if ( $this->get_config( 'mousewheel', $data ) ) {
+                ?>
+                $('ul#soliloquy-<?php echo $data['id']; ?>').on('mousewheel', function(e) {
+                    if (e.deltaY < 0) {
+                        // Scroll down
+                        soliloquy_slider['<?php echo $data['id']; ?>'].goToNextSlide();
+                    }
+                    if (e.deltaY > 0) {
+                        // Scroll up
+                        soliloquy_slider['<?php echo $data['id']; ?>'].goToPrevSlide();
+                    }
+                    if (e.deltaX > 0) {
+                        // Scroll right
+                        soliloquy_slider['<?php echo $data['id']; ?>'].goToNextSlide();
+                    }
+                    if (e.deltaX < 0) {
+                        // Scroll left
+                        soliloquy_slider['<?php echo $data['id']; ?>'].goToPrevSlide();
+                    }
+
+                    e.stopPropagation();
+                    e.preventDefault();
+                });
+                <?php
+            }
+
             // Process HTML slide helpers if we have HTML slides.
             if ( $this->html ) : ?>
             $(window).on({

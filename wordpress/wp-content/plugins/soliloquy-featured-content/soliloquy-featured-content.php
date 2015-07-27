@@ -5,7 +5,7 @@
  * Description: Enables featured content sliders in Soliloquy.
  * Author:      Thomas Griffin
  * Author URI:  http://thomasgriffinmedia.com
- * Version:     2.3.0
+ * Version:     2.3.1
  * Text Domain: soliloquy-fc
  * Domain Path: languages
  *
@@ -54,7 +54,7 @@ class Soliloquy_Featured_Content {
      *
      * @var string
      */
-    public $version = '2.3.0';
+    public $version = '2.3.1';
 
     /**
      * The name of the plugin.

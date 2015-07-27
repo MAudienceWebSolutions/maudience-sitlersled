@@ -89,16 +89,20 @@ class Soliloquy_Featured_Content_Metaboxes {
     	$instance = Soliloquy_Metaboxes::get_instance();
 
     	// Get all Featured Content Sliders
-    	$sliders = Soliloquy::get_instance()->get_sliders();
-    	foreach ( $sliders as $slider ) {
-    		// Skip non-FC sliders
-    		if ( $slider['config']['type'] !== 'fc' ) {
-    			continue;
-    		}
-    		
-    		// Delete transient for this FC slider
-    		delete_transient( '_sol_fc_' . $slider['id'] );
-    	}
+    	$sliders = Soliloquy::get_instance()->get_sliders( false, true ); // false = don't skip empty (i.e. FC) sliders
+    																	  // true = ignore cache/transient
+    	
+    	if ( is_array( $sliders ) ) {
+	    	foreach ( $sliders as $slider ) {
+	    		// Skip non-FC sliders
+	    		if ( $slider['config']['type'] !== 'fc' ) {
+	    			continue;
+	    		}
+
+	    		// Delete transient for this FC slider
+	    		delete_transient( '_sol_fc_' . $slider['id'] );
+	    	}
+	    }
 
     }
 

@@ -266,6 +266,9 @@ class Soliloquy_Shortcode {
 
         // Build out the slider HTML.
         $slider .= '<div aria-live="' . $this->get_config( 'aria_live', $data ) . '" id="soliloquy-container-' . sanitize_html_class( $data['id'] ) . '" class="' . $this->get_slider_classes( $data ) . '" style="max-width:' . $this->get_config( 'slider_width', $data ) . 'px;max-height:' . $this->get_config( 'slider_height', $data ) . 'px;' . apply_filters( 'soliloquy_output_container_style', '', $data ) . '"' . apply_filters( 'soliloquy_output_container_attr', '', $data ) . '>';
+            
+            $slider = apply_filters( 'soliloquy_output_before_list', $slider, $data ); // v2.4.2.2+
+
             $slider .= '<ul id="soliloquy-' . sanitize_html_class( $data['id'] ) . '" class="soliloquy-slider soliloquy-slides soliloquy-wrap soliloquy-clear">';
                 $slider = apply_filters( 'soliloquy_output_before_container', $slider, $data );
 
@@ -292,7 +295,10 @@ class Soliloquy_Shortcode {
 
                 $slider = apply_filters( 'soliloquy_output_after_container', $slider, $data );
             $slider .= '</ul>';
-            $slider  = apply_filters( 'soliloquy_output_end', $slider, $data );
+            
+            $slider = apply_filters( 'soliloquy_output_after_list', $slider, $data ); // v2.4.2.2+
+            $slider = apply_filters( 'soliloquy_output_end', $slider, $data ); // Historic, but retained due to soliloquy_output_start for backward compat
+        
         $slider .= '</div>';
 
         // Increment the counter.
@@ -975,7 +981,17 @@ class Soliloquy_Shortcode {
                         $('div.soliloquy-caption', $(element)).fadeIn();    
                     }, <?php echo $this->get_config( 'caption_delay', $data ); ?>);
                     <?php endif; ?>
-                    <?php do_action( 'soliloquy_api_after_transition', $data ); ?>
+
+                    <?php 
+                    // Stop + Start if Auto + Resume are both enabled
+                    if ( $this->get_config( 'auto', $data ) && ! $this->get_config( 'pause', $data ) ) {
+                        ?>
+                        soliloquy_slider['<?php echo $data['id']; ?>'].stopAuto();
+                        soliloquy_slider['<?php echo $data['id']; ?>'].startAuto();
+                        <?php
+                    }
+                    
+                    do_action( 'soliloquy_api_after_transition', $data ); ?>
                 }
                 <?php do_action( 'soliloquy_api_config_end', $data ); ?>
             });

@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Soliloquy package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Soliloquy 2.4.2.1\n"
+"Project-Id-Version: Soliloquy 2.4.2.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/soliloquy\n"
-"POT-Creation-Date: 2015-07-16 14:29:49+00:00\n"
+"POT-Creation-Date: 2015-07-23 13:53:52+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -271,11 +271,11 @@ msgid ""
 "video itself)..."
 msgstr ""
 
-#: includes/admin/metaboxes.php:175 includes/admin/metaboxes.php:1682
+#: includes/admin/metaboxes.php:175 includes/admin/metaboxes.php:1692
 msgid "Choose Video Placeholder Image"
 msgstr ""
 
-#: includes/admin/metaboxes.php:176 includes/admin/metaboxes.php:1683
+#: includes/admin/metaboxes.php:176 includes/admin/metaboxes.php:1693
 msgid "Remove Video Placeholder Image"
 msgstr ""
 
@@ -448,7 +448,7 @@ msgid "Slider Dimensions"
 msgstr ""
 
 #: includes/admin/metaboxes.php:792 includes/admin/metaboxes.php:845
-#: includes/admin/metaboxes.php:1056
+#: includes/admin/metaboxes.php:1065
 msgid "px"
 msgstr ""
 
@@ -473,7 +473,7 @@ msgid "Slider Transition Duration"
 msgstr ""
 
 #: includes/admin/metaboxes.php:814 includes/admin/metaboxes.php:823
-#: includes/admin/metaboxes.php:867 includes/admin/metaboxes.php:993
+#: includes/admin/metaboxes.php:867 includes/admin/metaboxes.php:1002
 msgid "ms"
 msgstr ""
 
@@ -573,345 +573,354 @@ msgid ""
 msgstr ""
 
 #: includes/admin/metaboxes.php:918
-msgid "Enable Mousewheel Navigation?"
+msgid "Pause on Navigation?"
 msgstr ""
 
 #: includes/admin/metaboxes.php:922
-msgid "Enables or disables mousewheel navigation in the slider."
+msgid ""
+"To resume autoplay after arrows/control nav are used, disable this option."
 msgstr ""
 
 #: includes/admin/metaboxes.php:927
-msgid "Loop Slider?"
+msgid "Enable Mousewheel Navigation?"
 msgstr ""
 
 #: includes/admin/metaboxes.php:931
-msgid "Enables or disables slider looping."
+msgid "Enables or disables mousewheel navigation in the slider."
 msgstr ""
 
 #: includes/admin/metaboxes.php:936
-msgid "Randomize Slider?"
+msgid "Loop Slider?"
 msgstr ""
 
 #: includes/admin/metaboxes.php:940
-msgid "Randomizes slides in the slider."
+msgid "Enables or disables slider looping."
 msgstr ""
 
 #: includes/admin/metaboxes.php:945
-msgid "Enable Keyboard Navigation?"
+msgid "Randomize Slider?"
 msgstr ""
 
 #: includes/admin/metaboxes.php:949
-msgid "Enables or disables keyboard navigation for the slider."
+msgid "Randomizes slides in the slider."
 msgstr ""
 
 #: includes/admin/metaboxes.php:954
-msgid "Use CSS Transitions?"
+msgid "Enable Keyboard Navigation?"
 msgstr ""
 
 #: includes/admin/metaboxes.php:958
-msgid "Enables hardware accelerated transitions via CSS."
+msgid "Enables or disables keyboard navigation for the slider."
 msgstr ""
 
 #: includes/admin/metaboxes.php:963
-msgid "Use Adaptive Height?"
+msgid "Use CSS Transitions?"
 msgstr ""
 
 #: includes/admin/metaboxes.php:967
-msgid "Allows the slider to adapt smoothly to slides with different sizes."
+msgid "Enables hardware accelerated transitions via CSS."
 msgstr ""
 
 #: includes/admin/metaboxes.php:972
-msgid "Set Dimensions on Images?"
+msgid "Use Adaptive Height?"
 msgstr ""
 
 #: includes/admin/metaboxes.php:976
+msgid "Allows the slider to adapt smoothly to slides with different sizes."
+msgstr ""
+
+#: includes/admin/metaboxes.php:981
+msgid "Set Dimensions on Images?"
+msgstr ""
+
+#: includes/admin/metaboxes.php:985
 msgid ""
 "Enables or disables the width and height attributes on the img element. Only "
 "needs to be enabled if you need to meet Google Pagespeeds requirements, or "
 "if you're using Photon CDN and having issues with slider images displaying."
 msgstr ""
 
-#: includes/admin/metaboxes.php:981
+#: includes/admin/metaboxes.php:990
 msgid "Crop Images in Slider?"
 msgstr ""
 
-#: includes/admin/metaboxes.php:985
+#: includes/admin/metaboxes.php:994
 msgid ""
 "Enables or disables image cropping based on slider dimensions "
 "<strong>(recommended)</strong>."
 msgstr ""
 
-#: includes/admin/metaboxes.php:990
+#: includes/admin/metaboxes.php:999
 msgid "Slider Delay"
 msgstr ""
 
-#: includes/admin/metaboxes.php:994
+#: includes/admin/metaboxes.php:1003
 msgid ""
 "If autostarting, this sets a delay before the slider should begin "
 "transitioning <strong>(in milliseconds)</strong>."
 msgstr ""
 
-#: includes/admin/metaboxes.php:999
+#: includes/admin/metaboxes.php:1008
 msgid "Start On Slide"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1003
+#: includes/admin/metaboxes.php:1012
 msgid "The starting slide number (index based, starts at 0)."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1008
+#: includes/admin/metaboxes.php:1017
 msgid "ARIA Live Value"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1016
+#: includes/admin/metaboxes.php:1025
 msgid ""
 "Accessibility: Defines the priority with which screen readers should treat "
 "updates to this slider."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1039
+#: includes/admin/metaboxes.php:1048
 msgid ""
 "The settings below adjust configuration options for the slider display when "
 "viewed on a mobile device."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1044
+#: includes/admin/metaboxes.php:1053
 msgid "Create Mobile Slider Images?"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1048
+#: includes/admin/metaboxes.php:1057
 msgid "Enables or disables creating specific images for mobile devices."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1053
+#: includes/admin/metaboxes.php:1062
 msgid "Mobile Dimensions"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1057
+#: includes/admin/metaboxes.php:1066
 msgid "These will be the sizes used for images displayed on mobile devices."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1062
+#: includes/admin/metaboxes.php:1071
 msgid "Show Captions on Mobile?"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1066
+#: includes/admin/metaboxes.php:1075
 msgid "Enables or disables captions to be displayed on mobile."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1089
+#: includes/admin/metaboxes.php:1098
 msgid ""
 "The settings below adjust the miscellaneous settings for the slider lightbox "
 "display."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1094
+#: includes/admin/metaboxes.php:1103
 msgid "Slider Title"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1098
+#: includes/admin/metaboxes.php:1107
 msgid "Internal slider title for identification in the admin."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1103
+#: includes/admin/metaboxes.php:1112
 msgid "Slider Slug"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1107
+#: includes/admin/metaboxes.php:1116
 msgid ""
 "<strong>Unique</strong> internal slider slug for identification and advanced "
 "slider queries."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1112
+#: includes/admin/metaboxes.php:1121
 msgid "Custom Slider Classes"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1115
+#: includes/admin/metaboxes.php:1124
 msgid "Enter custom slider CSS classes here, one per line."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1116
+#: includes/admin/metaboxes.php:1125
 msgid "Adds custom CSS classes to this slider. Enter one class per line."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1121
+#: includes/admin/metaboxes.php:1130
 msgid "Import/Export Slider"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1134
+#: includes/admin/metaboxes.php:1143
 msgid "Import Slider"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1141
+#: includes/admin/metaboxes.php:1150
 msgid "Export Slider"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1147
+#: includes/admin/metaboxes.php:1156
 msgid "Enable RTL Support?"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1151
+#: includes/admin/metaboxes.php:1160
 msgid ""
 "Enables or disables RTL support in Soliloquy for right-to-left languages."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1365
+#: includes/admin/metaboxes.php:1375
 msgid "Remove Image Slide from Slider?"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1366
+#: includes/admin/metaboxes.php:1376
 msgid "Modify Image Slide"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1388
+#: includes/admin/metaboxes.php:1398
 msgid "Video"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1408
+#: includes/admin/metaboxes.php:1418
 msgid "Remove Video Slide from Slider?"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1409
+#: includes/admin/metaboxes.php:1419
 msgid "Modify Video Slide"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1432
+#: includes/admin/metaboxes.php:1442
 msgid "HTML"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1441
+#: includes/admin/metaboxes.php:1451
 msgid "Remove HTML Slide from Slider?"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1442
+#: includes/admin/metaboxes.php:1452
 msgid "Modify HTML Slide"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1477 includes/admin/metaboxes.php:1660
-#: includes/admin/metaboxes.php:1833
+#: includes/admin/metaboxes.php:1487 includes/admin/metaboxes.php:1670
+#: includes/admin/metaboxes.php:1843
 msgid "Edit previous media item"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1480 includes/admin/metaboxes.php:1663
-#: includes/admin/metaboxes.php:1836
+#: includes/admin/metaboxes.php:1490 includes/admin/metaboxes.php:1673
+#: includes/admin/metaboxes.php:1846
 msgid "Edit next media item"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1486 includes/admin/metaboxes.php:1669
-#: includes/admin/metaboxes.php:1842
+#: includes/admin/metaboxes.php:1496 includes/admin/metaboxes.php:1679
+#: includes/admin/metaboxes.php:1852
 msgid "Edit Metadata"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1507
+#: includes/admin/metaboxes.php:1517
 msgid "Images and SEO"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1508
+#: includes/admin/metaboxes.php:1518
 msgid ""
 "Images are a small but important part of your overall SEO strategy. In order "
 "to get the most SEO benefits from your slider, it is recommended that you "
 "fill out each applicable field with SEO friendly information about the image."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1514 includes/admin/metaboxes.php:1558
-#: includes/admin/metaboxes.php:1694 includes/admin/metaboxes.php:1738
-#: includes/admin/metaboxes.php:1865 includes/admin/metaboxes.php:1895
+#: includes/admin/metaboxes.php:1524 includes/admin/metaboxes.php:1568
+#: includes/admin/metaboxes.php:1704 includes/admin/metaboxes.php:1748
+#: includes/admin/metaboxes.php:1875 includes/admin/metaboxes.php:1905
 #: includes/admin/posttype.php:79 includes/global/widget.php:148
 msgid "Title"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1515
+#: includes/admin/metaboxes.php:1525
 msgid "Sets the image title attribute for the image."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1521 includes/admin/metaboxes.php:1565
+#: includes/admin/metaboxes.php:1531 includes/admin/metaboxes.php:1575
 msgid "Alt Text"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1522
+#: includes/admin/metaboxes.php:1532
 msgid ""
 "The image alt text is used for SEO, so make sure you complete this field!"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1528 includes/admin/metaboxes.php:1572
+#: includes/admin/metaboxes.php:1538 includes/admin/metaboxes.php:1582
 msgid "Hyperlink"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1529
+#: includes/admin/metaboxes.php:1539
 msgid ""
 "The image hyperlink field is used when you click on an image in the slider."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1535 includes/admin/metaboxes.php:1586
-#: includes/admin/metaboxes.php:1715 includes/admin/metaboxes.php:1759
+#: includes/admin/metaboxes.php:1545 includes/admin/metaboxes.php:1596
+#: includes/admin/metaboxes.php:1725 includes/admin/metaboxes.php:1769
 msgid "Caption"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1536 includes/admin/metaboxes.php:1716
+#: includes/admin/metaboxes.php:1546 includes/admin/metaboxes.php:1726
 msgid ""
 "Captions can take any type of HTML content, such as <code>form</code>, "
 "<code>iframe</code> and <code>h1</code> tags."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1549 includes/admin/metaboxes.php:1729
-#: includes/admin/metaboxes.php:1886
+#: includes/admin/metaboxes.php:1559 includes/admin/metaboxes.php:1739
+#: includes/admin/metaboxes.php:1896
 msgid "Status"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1551 includes/admin/metaboxes.php:1731
-#: includes/admin/metaboxes.php:1888 includes/admin/settings.php:472
+#: includes/admin/metaboxes.php:1561 includes/admin/metaboxes.php:1741
+#: includes/admin/metaboxes.php:1898 includes/admin/settings.php:472
 msgid "Draft"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1552 includes/admin/metaboxes.php:1732
-#: includes/admin/metaboxes.php:1889 includes/admin/settings.php:471
+#: includes/admin/metaboxes.php:1562 includes/admin/metaboxes.php:1742
+#: includes/admin/metaboxes.php:1899 includes/admin/settings.php:471
 msgid "Published"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1579
+#: includes/admin/metaboxes.php:1589
 msgid "Open Link in New Tab? "
 msgstr ""
 
-#: includes/admin/metaboxes.php:1611 includes/admin/metaboxes.php:1784
-#: includes/admin/metaboxes.php:1916
+#: includes/admin/metaboxes.php:1621 includes/admin/metaboxes.php:1794
+#: includes/admin/metaboxes.php:1926
 msgid "Save Metadata"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1616 includes/admin/metaboxes.php:1789
-#: includes/admin/metaboxes.php:1921
+#: includes/admin/metaboxes.php:1626 includes/admin/metaboxes.php:1799
+#: includes/admin/metaboxes.php:1931
 msgid "Saved."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1695 includes/admin/metaboxes.php:1866
+#: includes/admin/metaboxes.php:1705 includes/admin/metaboxes.php:1876
 msgid ""
 "The title can take any type of HTML. You can adjust the position of the "
 "titles in the main Lightbox settings."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1701 includes/admin/metaboxes.php:1745
+#: includes/admin/metaboxes.php:1711 includes/admin/metaboxes.php:1755
 msgid "URL"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1702
+#: includes/admin/metaboxes.php:1712
 msgid "The URL of the YouTube / Vimeo video."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1708 includes/admin/metaboxes.php:1752
+#: includes/admin/metaboxes.php:1718 includes/admin/metaboxes.php:1762
 msgid "Placeholder"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1709
+#: includes/admin/metaboxes.php:1719
 msgid ""
 "Either choose a video placeholder image, or let Soliloquy automatically "
 "fetch one from the video source."
 msgstr ""
 
-#: includes/admin/metaboxes.php:1872 includes/admin/metaboxes.php:1902
+#: includes/admin/metaboxes.php:1882 includes/admin/metaboxes.php:1912
 msgid "Code"
 msgstr ""
 
-#: includes/admin/metaboxes.php:1873
+#: includes/admin/metaboxes.php:1883
 msgid ""
 "Remember, custom HTML slides are, in fact, custom. You are responsible for "
 "styling and manipulating the code you insert into the slide; with great "
@@ -1230,22 +1239,22 @@ msgstr ""
 msgid "Assertive"
 msgstr ""
 
-#: includes/global/common.php:492
+#: includes/global/common.php:493
 msgid ""
 "No image editor could be selected. Please verify with your webhost that you "
 "have either the GD or Imagick image library compiled with your PHP install "
 "on your server."
 msgstr ""
 
-#: includes/global/common.php:595
+#: includes/global/common.php:596
 msgid "No image URL specified for cropping."
 msgstr ""
 
-#: includes/global/common.php:614
+#: includes/global/common.php:615
 msgid "No file could be found for the image URL specified."
 msgstr ""
 
-#: includes/global/common.php:622 includes/global/common.php:634
+#: includes/global/common.php:623 includes/global/common.php:635
 msgid ""
 "The dimensions of the original image could not be retrieved for cropping."
 msgstr ""
@@ -1254,7 +1263,7 @@ msgstr ""
 msgid "Soliloquy Sliders"
 msgstr ""
 
-#. #-#-#-#-#  soliloquy.pot (Soliloquy 2.4.2.1)  #-#-#-#-#
+#. #-#-#-#-#  soliloquy.pot (Soliloquy 2.4.2.2)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: includes/global/posttype.php:52 includes/global/posttype.php:62
 #: includes/global/widget.php:64
@@ -1293,7 +1302,7 @@ msgstr ""
 msgid "No Soliloquy sliders found in trash."
 msgstr ""
 
-#: includes/global/shortcode.php:457
+#: includes/global/shortcode.php:463
 msgid ""
 "<p><strong>Oops - it looks like we had trouble retrieving data about the "
 "video you requested. Please make sure your video URL is supported and in the "
@@ -1308,7 +1317,7 @@ msgstr ""
 msgid "Slider"
 msgstr ""
 
-#: soliloquy.php:568
+#: soliloquy.php:578
 msgid ""
 "Sorry, but your version of WordPress does not meet Soliloquy's required "
 "version of <strong>3.5.1</strong> to run properly. The plugin has been "

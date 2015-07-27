@@ -913,6 +913,15 @@ class Soliloquy_Metaboxes {
                             <span class="description"><?php _e( 'Pauses the slider (if set to autostart) when a visitor hovers over the slider.', 'soliloquy' ); ?></span>
                         </td>
                     </tr>
+                    <tr id="soliloquy-config-resume-box">
+                        <th scope="row">
+                            <label for="soliloquy-config-pause"><?php _e( 'Pause on Navigation?', 'soliloquy' ); ?></label>
+                        </th>
+                        <td>
+                            <input id="soliloquy-config-pause" type="checkbox" name="_soliloquy[pause]" value="<?php echo $this->get_config( 'pause', $this->get_config_default( 'pause' ) ); ?>" <?php checked( $this->get_config( 'pause', $this->get_config_default( 'pause' ) ), 1 ); ?> />
+                            <span class="description"><?php _e( 'To resume autoplay after arrows/control nav are used, disable this option.', 'soliloquy' ); ?></span>
+                        </td>
+                    </tr>
                     <tr id="soliloquy-config-mousewheel-box">
                         <th scope="row">
                             <label for="soliloquy-config-mousewheel"><?php _e( 'Enable Mousewheel Navigation?', 'soliloquy' ); ?></label>
@@ -1233,6 +1242,7 @@ class Soliloquy_Metaboxes {
         $settings['config']['pauseplay']     = isset( $_POST['_soliloquy']['pauseplay'] ) ? 1 : 0;
         $settings['config']['mobile_caption']= isset( $_POST['_soliloquy']['mobile_caption'] ) ? 1 : 0;
         $settings['config']['hover']         = isset( $_POST['_soliloquy']['hover'] ) ? 1 : 0;
+        $settings['config']['pause']         = isset( $_POST['_soliloquy']['pause'] ) ? 1 : 0;
         $settings['config']['mousewheel']    = isset( $_POST['_soliloquy']['mousewheel'] ) ? 1 : 0;
         $settings['config']['slider']        = isset( $_POST['_soliloquy']['slider'] ) ? 1 : 0;
         $settings['config']['mobile']        = isset( $_POST['_soliloquy']['mobile'] ) ? 1 : 0;
